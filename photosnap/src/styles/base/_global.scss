@@ -1,0 +1,31 @@
+// Body and HTML settings
+html {
+  font-size: $font-size-base;  // Establish base font size for scaling
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+// Container (for consistent width and padding)
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $space-sm;
+}
