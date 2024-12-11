@@ -1,0 +1,24 @@
+// Color Palette
+$color-primary: #FFC593;
+$color-secondary: #BC7198;
+$color-tertiary: #5A77FF;
+
+$color-black: #000000;
+$color-gray: #DFDFDF;
+$color-white: #FFFFFF;
+
+// Gradient Definition
+$gradient: linear-gradient(90deg, $color-primary 0%, $color-secondary 52%, $color-tertiary 100%);
+
+
+// Font Families
+$font-family-primary: 'DM Sans', sans-serif;
+
+// Font Sizes
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;

@@ -1,5 +1,6 @@
 // Utils
-@use './utils/variables' as vars;
+@use './utils/breakpoints';
+@use './utils/variables';
 @use './utils/mixins';
 @use './utils/functions';
 

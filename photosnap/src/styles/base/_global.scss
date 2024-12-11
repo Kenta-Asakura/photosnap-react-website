@@ -1,21 +1,30 @@
-// Body and HTML settings
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
 html {
-  font-size: $font-size-base;  // Establish base font size for scaling
+  font-size: 100%;
 }
 
 body {
-  font-family: $font-family;
-  background-color: $background-color;
-  color: $text-color;
-  line-height: $line-height;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-size: 15px;
+  color: var.$color-black;
+  font-family: var.$font-family-primary;
+  font-weight: var.$font-weight-regular;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var.$font-weight-bold;
+  line-height: 25px;
+  letter-spacing: 0;
 }
 
 a {
   text-decoration: none;
-  color: $primary-color;
 }
 
 a:hover, a:focus {
@@ -27,5 +36,5 @@ a:hover, a:focus {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: $space-sm;
+  // padding: $space-sm;
 }
