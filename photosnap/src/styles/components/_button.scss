@@ -1,0 +1,41 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
+.btn {
+  font-size: 12px;
+  font-weight: var.$font-weight-bold;
+  letter-spacing: 2px;
+}
+
+.btn-primary {
+  display: inline-block;
+  height: 40px;
+  padding-inline: 24px;
+
+  &:hover {
+    color: var.$color-black;
+    background-color: var.$color-gray;
+  }
+
+  &--black {
+    color: var.$color-white;
+    background-color: var.$color-black;
+  }
+  &--white {
+    color: var.$color-black;
+    background-color: var.$color-white;
+  }
+}
+
+// use arrow.svg
+.btn-secondary {
+  &:hover {
+  }
+
+  &--black {
+    color: var.$color-black;
+  }
+  &--white {
+    color: var.$color-white;
+  }
+}
