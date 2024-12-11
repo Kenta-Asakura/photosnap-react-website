@@ -1,10 +1,9 @@
-import './App.css'
+import Header from './components/Header.jsx'
 
 function App() {
   return (
     <>
-      <h1>RED</h1>
-      <p>sample paragraph text</p>
+      <Header></Header>
     </>
   )
 }

@@ -24,7 +24,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  font-size: 12px;
+  font-weight: var.$font-weight-bold;
+  letter-spacing: 2px;
+  color: var.$color-black;
+  text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    color: var.$color-gray;
+  }
 }
 
 a:hover, a:focus {

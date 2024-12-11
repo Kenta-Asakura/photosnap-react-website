@@ -1,15 +1,19 @@
 @use '../utils/breakpoints' as bp;
+@use '../utils/mixins' as mix;
 @use '../utils/variables' as var;
 
 .btn {
   font-size: 12px;
   font-weight: var.$font-weight-bold;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .btn-primary {
-  display: inline-block;
-  height: 40px;
+  @include mix.flex-center;
+
+  min-height: 40px;
+  max-height: 50px;
   padding-inline: 24px;
 
   &:hover {

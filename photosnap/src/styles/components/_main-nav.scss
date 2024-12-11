@@ -1,0 +1,25 @@
+@use '../utils/breakpoints' as bp;
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+  &__list {
+    display: flex;
+    gap: 37px;
+    list-style: none;
+    margin-right: 10%;
+
+    @include bp.respond-to(mobile-devices) {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    a {
+
+    }
+  }
+}
