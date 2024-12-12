@@ -1,25 +1,70 @@
 @use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
+  position: relative;
+
+  &__mobile-toggle-btn {
+    display: none;
+
+    @include bp.respond-to(mobile) {
+      display: inline-block;
+    }
+
+    .icon {
+      &-open{
+
+      }
+      &-close {
+
+      }
+    }
+  }
+
+  &__list-wrapper {
+    display: contents;
+
+    @include bp.respond-to(mobile) {
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+
+      position: absolute;
+      top: 50px;
+    }
+  }
 
   &__list {
     display: flex;
     gap: 37px;
     list-style: none;
-    margin-right: 10%;
 
-    @include bp.respond-to(mobile-devices) {
+    @include bp.respond-to(tablet) {
       gap: 30px;
     }
-  }
 
-  &__item {
-    a {
+    @include bp.respond-to(mobile) {
+      flex-direction: column;
+      gap: 20px;
 
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        opacity: .25;
+        background-color: var.$color-black;
+      }
+    }
+
+    &__item {
+      a {
+
+      }
     }
   }
 }

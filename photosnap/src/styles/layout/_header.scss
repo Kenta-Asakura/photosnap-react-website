@@ -8,6 +8,10 @@
   padding-inline: 40px;
   background-color: var.$color-white;
 
+  @include  bp.respond-to(tablet) {
+    padding-inline: 30px;
+  }
+
   &-inner-wrapper {
     display: flex;
     align-items: center;
