@@ -1,0 +1,36 @@
+@use "../utils/breakpoints" as bp;
+@use "../utils/variables" as var;
+
+.footer {
+  background-color: var.$color-black;
+  padding-block: 64px;
+
+  @include  bp.respond-to(mobile) {
+    padding-block: 56px;
+  }
+
+  a {
+    color: var.$color-white;
+  }
+
+  &-inner-wrapper {
+  }
+
+  &__block {
+    &-left {
+      display: grid;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    ul {
+      list-style: none;
+    }
+  }
+}

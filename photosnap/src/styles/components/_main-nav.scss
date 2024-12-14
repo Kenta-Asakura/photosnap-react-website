@@ -56,25 +56,27 @@
   }
 
   &__list {
-    display: flex;
-    gap: 37px;
-    list-style: none;
+    ul {
+      display: flex;
+      gap: 37px;
+      list-style: none;
 
-    @include bp.respond-to(tablet) {
-      gap: 30px;
-    }
+      @include bp.respond-to(tablet) {
+        gap: 30px;
+      }
 
-    @include bp.respond-to(mobile) {
-      flex-direction: column;
-      gap: 20px;
+      @include bp.respond-to(mobile) {
+        flex-direction: column;
+        gap: 20px;
 
-      &:after {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 100%;
-        opacity: .25;
-        background-color: var.$color-black;
+        &:after {
+          content: "";
+          display: block;
+          height: 1px;
+          width: 100%;
+          opacity: .25;
+          background-color: var.$color-black;
+        }
       }
     }
   }

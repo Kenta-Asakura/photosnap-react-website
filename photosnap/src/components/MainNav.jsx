@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Nav from "./Nav";
 
 function MainNav() {
   const [isMobileMenuExpanded, setMobileMenuExpanded] = useState(false);
@@ -22,11 +23,7 @@ function MainNav() {
       </button>
 
       <div className={`main-nav__list-wrapper ${isMobileMenuExpanded ? "main-nav__list-wrapper--expanded" : ""}`}>
-        <ul className="main-nav__list">
-          <li className="main-nav-list__item"><a href="">Stories</a></li>
-          <li className="main-nav-list__item"><a href="">Features</a></li>
-          <li className="main-nav-list__item"><a href="">Pricing</a></li>
-        </ul>
+        <Nav className="main-nav__list" type="header" />
 
         <a href="" className="btn btn-primary btn-primary--black">Get an invite</a>
       </div>
