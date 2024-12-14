@@ -40,6 +40,10 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+img {
+  display: block;
+}
+
 // Container (for consistent width and padding)
 .container {
   width: 100%;
