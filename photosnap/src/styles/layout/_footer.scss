@@ -5,7 +5,7 @@
   background-color: var.$color-black;
   padding-block: 64px;
 
-  @include  bp.respond-to(mobile) {
+  @include bp.respond-to(mobile) {
     padding-block: 56px;
   }
 
@@ -15,6 +15,7 @@
 
   &-inner-wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__block {
@@ -23,31 +24,90 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 110px;
+
+      @include bp.respond-to(mobile-devices) {
+        align-items: baseline;
+        grid-template-columns: 1fr;
+        // grid-template-rows: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0;
+      }
     }
 
     &-right {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  // left
+  &__logo {
+    grid-row: 1 / 2;
+
+    @include bp.respond-to(mobile-devices) {
+      margin-bottom: 32px;
     }
   }
 
   &__nav {
+    text-align: left;
     max-width: 255px;
-    height: 100%;
-    width: 100%;
     grid-column: 2 / -1;
     grid-row: 1 / -1;
+
+    @include bp.respond-to(mobile-devices) {
+      max-width: unset;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+    @include bp.respond-to(tablet) {
+      margin-bottom: 72px;
+    }
+    @include bp.respond-to(mobile) {
+      grid-row: 3 / -1;
+    }
 
     ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
+
+      @include bp.respond-to(desktop) {
+        height: 100%;
+      }
+      @include bp.respond-to(tablet) {
+        flex-direction: row;
+        column-gap: 26px;
+      }
     }
   }
 
   &__social-links {
+    @include bp.respond-to(tablet) {
+      grid-row: 3 / -1;
+    }
+
+    @include bp.respond-to(mobile) {
+      grid-row: 2 / 3;
+    }
+  }
+
+  // right
+  &__invite-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 42px;
+      height: 12px;
+    }
+  }
+
+  &__copyright {
+    color: var.$color-gray;
   }
 }

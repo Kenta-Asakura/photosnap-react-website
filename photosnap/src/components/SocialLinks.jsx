@@ -14,7 +14,7 @@ const socialLinks = [
 
 function SocialLinks({ className }) {
   return(
-    <ul className={`social-links ${className}`}>
+    <ul className={`${className} social-links`}>
       {socialLinks.map((link) => (
         <li className="social-links__item" key={link.name}>
           <a href={link.href} target="_blank  " rel="noopener noreferrer">
