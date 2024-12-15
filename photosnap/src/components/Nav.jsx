@@ -1,9 +1,9 @@
 // Nav.jsx
 const Nav = ({ className, type }) => {
   const links = [
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/stories', label: 'Stories' },
+    { href: '/features', label: 'Features' },
+    { href: '/pricing', label: 'Pricing' },
   ];
 
   if (type === 'footer') {
