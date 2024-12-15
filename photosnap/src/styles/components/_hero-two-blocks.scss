@@ -1,0 +1,27 @@
+.hero-two-blocks {
+  &--reverse {
+    &-inner-wrapper {
+    }
+  }
+
+  &-inner-wrapper {
+    display: flex;
+
+    &__white {
+
+    }
+
+    &__black {
+      
+    }
+  }
+
+  &__contents-block {
+    padding-inline: 111px;
+    margin: auto;
+  }
+
+  &__image-block {
+
+  }
+}

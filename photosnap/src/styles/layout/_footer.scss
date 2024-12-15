@@ -113,17 +113,8 @@
 
   // right
   &__invite-btn {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
     @include bp.respond-to(mobile) {
       margin-bottom: 30px;
-    }
-
-    img {
-      width: 42px;
-      height: 12px;
     }
   }
 

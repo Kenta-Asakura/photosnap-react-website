@@ -12,11 +12,11 @@ function Footer(params) {
             <img src={FooterLogo} alt="Photosnap Footer Logo" />
           </a>
           <Nav className="footer__nav" type="footer" />
-          <SocialLinks className="footer__social-links" />
+          <SocialLinks className="footer__social-links" />  
         </div>
 
         <div className="footer__block-right">
-          <a className='footer__invite-btn btn-secondary'>Get an invite <img src={ArrowIconWhite} alt="Arrow Icon" /></a>
+          <a className='footer__invite-btn btn-secondary btn-secondary--white'>Get an invite </a>
           <p className='footer__copyright'>Copyright 2019. All Rights Reserved</p>
         </div>
       </div>

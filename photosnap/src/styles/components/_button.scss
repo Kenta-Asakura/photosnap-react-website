@@ -33,13 +33,36 @@
 
 // use arrow.svg
 .btn-secondary {
-  &:hover {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &--black {
     color: var.$color-black;
+
+    &::after {
+      background-image: url('src/assets/shared/desktop/arrow-black.svg');
+    }
   }
   &--white {
     color: var.$color-white;
+
+    &::after {
+      background-image: url('src/assets/shared/desktop/arrow-white.svg');
+    }
   }
+
+  // img {
+  //   width: 42px;
+  //   height: 12px;
+  // }
 }
