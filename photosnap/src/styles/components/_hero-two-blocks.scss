@@ -1,3 +1,6 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
 .hero-two-blocks {
   &--reverse {
     &-inner-wrapper {
@@ -7,18 +10,22 @@
   &-inner-wrapper {
     display: flex;
 
-    &__white {
-
-    }
-
-    &__black {
-      
+    &--reverse {
+      flex-direction: row-reverse;
     }
   }
 
   &__contents-block {
     padding-inline: 111px;
     margin: auto;
+
+    &--white {
+      background-color: var.$color-white;
+    }
+    &--black {
+      background-color: var.$color-black;
+      color: var.$color-white
+    }
   }
 
   &__image-block {

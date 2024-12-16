@@ -1,14 +1,18 @@
 function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnText, imgHeight, imgSrc }) {
   // Settings
-  // blocksLayout = '', 'reverse'
-  // contentsBgColor = 'black', 'white'
-  // imgHeight = 's', 'm', 'l'
+  // blocksLayout: default = '', 'reverse'
+  // contentsBgColor: 'black', 'white'
+  // imgHeight: 's', 'm', 'l'
 
-  const optionalButton = btnText ?? (
+  const optionalButton = btnText ? (
     <a href="" className={`btn-secondary btn-secondary--${contentsBgColor === 'white' ? 'black' : 'white'}`}>
       {btnText}
     </a>
-  )
+  ) : null;
+
+  const desktopImg = imgSrc?.desktop;
+  const tabletImg = imgSrc?.tablet;
+  const mobileImg = imgSrc?.mobile;
 
   return (
     <div className="hero-two-blocks">
@@ -21,16 +25,12 @@ function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnT
           </div>
 
           <div className="hero-two-block__image-block">
-            {/* TEST */}
-            <p>{console.log(imgSrc)}</p>
-
             <picture>
-              {/* <source media="(max-width: 768px)" srcSet={imgSrc.mobile} />
-              <source media="(max-width: 1024px)" srcSet={imgSrc.tablet} /> */}
+              <source media="(max-width: 768px)" srcSet={mobileImg} />
+              <source media="(max-width: 1024px)" srcSet={tabletImg} />
               <img
                 className={`hero-two-blocks__image--${imgHeight}`}
-                src={imgSrc}
-                // src={imgSrc.desktop}
+                src={desktopImg}
                 alt={`${heading} Image`}
               />
             </picture>
