@@ -34,8 +34,12 @@
     width: 100%;
 
     @include bp.respond-to(mobile) {
-      position: absolute;
-      top: 0;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      width: 100%;
+      background-color: var.$color-white;
+
       display: flex;
       flex-direction: column;
       row-gap: 20px;
@@ -49,7 +53,6 @@
     }
 
     &--expanded {
-      top: 50px;
       max-height: 300px;
       visibility: visible;
     }
@@ -64,7 +67,6 @@
       @include bp.respond-to(tablet) {
         gap: 30px;
       }
-
       @include bp.respond-to(mobile) {
         flex-direction: column;
         gap: 20px;
