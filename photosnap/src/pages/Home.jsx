@@ -24,7 +24,7 @@ function Home() {
         desktop: CreateAndShareDesktop,
         tablet: CreateAndShareTablet,
         mobile: CreateAndShareMobile,
-      },
+      }, 
     },
     {
       blocksLayout: 'reverse',

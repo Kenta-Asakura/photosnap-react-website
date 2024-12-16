@@ -1,5 +1,6 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
 
 .hero-two-blocks {
   &--reverse {
@@ -10,14 +11,35 @@
   &-inner-wrapper {
     display: flex;
 
-    &--reverse {
-      flex-direction: row-reverse;
+    @include bp.respond-to(tablet-and-desktop) {
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    @include bp.respond-to(mobile) {
+      flex-direction: column
     }
   }
 
   &__contents-block {
-    padding-inline: 111px;
-    margin: auto;
+    @include mix.flex-center;
+    width: 42%;
+    text-align: left;
+
+    @include bp.respond-to(desktop-medium) {
+      padding-inline: 111px;
+    }
+    @include bp.respond-to(desktop) {
+      padding-inline: 72px;
+    }
+    @include bp.respond-to(tablet) {
+      width: 62%;
+      padding-inline: 54px;
+    }
+    @include bp.respond-to(mobile) {
+      order: 2;
+      padding: 72px 24px;
+    }
 
     &--white {
       background-color: var.$color-white;
@@ -26,9 +48,69 @@
       background-color: var.$color-black;
       color: var.$color-white
     }
+
+    &__heading {
+      text-transform: uppercase;
+    }
+
+    &__description {
+      margin-top: 21px;
+      margin-bottom: 48px;
+
+      @include bp.respond-to(mobile) {
+        margin-top: 16px;
+        margin-bottom: 23px;
+      }
+    }
   }
 
   &__image-block {
+    width: 58%;
 
+    @include bp.respond-to(tablet) {
+      width: 38%;
+    }
+    @include bp.respond-to(mobile) {
+      order: 1;
+    }
+
+    &__img--s {
+      height: 490px;
+    }
+    &__img--m {
+      height: 600px;
+    }
+    &__img--l {
+      height: 650px;
+    }
+    @include bp.respond-to(mobile) {
+      &__img--s,
+      &__img--m,
+      &__img--l {
+        height: auto;
+        max-height: 450px;
+      }
+
+      &__img--m {
+        min-height: 270px;
+      }
+      &__img--s ,
+      &__img--l {
+        min-height: 300px;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+
+  &__contents-block,
+  &__image-block {
+    @include bp.respond-to(mobile) {
+      width: 100%;
+    }
   }
 }
