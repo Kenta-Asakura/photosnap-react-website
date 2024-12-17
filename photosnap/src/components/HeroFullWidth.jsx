@@ -7,7 +7,7 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
     <section className="hero-full-width">
       <div className="hero-full-width-inner-wrapper">
 
-        <div className="hero-full-width__image-overlay">
+        <div className="hero-full-width__bg-image">
           <picture>
             <source media="(max-width: 768px)" srcSet={mobileImg} />
             <source media="(max-width: 1024px)" srcSet={tabletImg} />

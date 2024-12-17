@@ -18,7 +18,7 @@
     }
   }
 
-  &__image-overlay {
+  &__bg-image {
     @include bp.respond-to(tablet-and-desktop) {
       position: absolute;
       top: 0;
@@ -43,7 +43,6 @@
   }
 
   &__contents-block {
-
     position: relative;
     z-index: 2;
     max-width: 1440px;
@@ -116,7 +115,6 @@
       opacity: .75;
     }
     &__author {
-
     }
 
     &__description {

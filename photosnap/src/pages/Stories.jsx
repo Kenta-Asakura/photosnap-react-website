@@ -1,4 +1,5 @@
 import HeroFullWidth from "../components/HeroFullWidth";
+import StoriesGrid from "../components/StoriesGrid";
 
 import MoonOfAppalaciaDesktop from '../assets/stories/desktop/moon-of-appalacia.jpg';
 import MoonOfAppalaciaTablet from '../assets/stories/tablet/moon-of-appalacia.jpg';

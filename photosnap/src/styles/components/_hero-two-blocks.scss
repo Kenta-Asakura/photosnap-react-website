@@ -3,11 +3,6 @@
 @use '../utils/mixins' as mix;
 
 .hero-two-blocks {
-  &--reverse {
-    &-inner-wrapper {
-    }
-  }
-
   &-inner-wrapper {
     display: flex;
 
