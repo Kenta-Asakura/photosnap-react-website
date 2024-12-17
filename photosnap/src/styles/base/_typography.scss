@@ -1,15 +1,17 @@
 @use '../utils/breakpoints' as bp;
 
 h1,
-h2.h2-large {
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 4.17px;
+h2 {
+  &.h2-large {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 4.17px;
 
-  @include bp.respond-to(mobile) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 3.33px;
+    @include bp.respond-to(mobile) {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 3.33px;
+    }
   }
 }
 

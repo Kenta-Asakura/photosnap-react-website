@@ -31,14 +31,21 @@ a {
   text-transform: uppercase;
   text-decoration: none;
 
+  &:hover, &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   &:hover {
     color: var.$color-gray;
   }
 }
 
-a:hover, a:focus {
-  text-decoration: underline;
-  cursor: pointer;
+.white {
+  color: var.$color-white;
+}
+.gray {
+  color: var.$color-gray;
 }
 
 img {

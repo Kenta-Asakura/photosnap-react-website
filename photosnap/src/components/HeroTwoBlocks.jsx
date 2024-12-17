@@ -15,7 +15,7 @@ function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnT
   const mobileImg = imgSrc?.mobile;
 
   return (
-    <div className="hero-two-blocks">
+    <section className="hero-two-blocks">
       <div className="container-fluid">
         <div className={`hero-two-blocks-inner-wrapper${blocksLayout ? ` hero-two-blocks-inner-wrapper--${blocksLayout}` : ''}`}>
 
@@ -41,7 +41,7 @@ function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnT
 
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

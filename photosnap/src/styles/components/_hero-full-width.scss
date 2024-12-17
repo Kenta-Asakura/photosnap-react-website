@@ -1,0 +1,127 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.hero-full-width {
+  position: relative;
+
+  @include bp.respond-to(tablet-and-desktop) {
+    height: 650px;
+  }
+
+  &-inner-wrapper {
+    height: 100%;
+
+    @include bp.respond-to(mobile) {
+      display: flex;
+      flex-direction: column
+    }
+  }
+
+  &__image-overlay {
+    @include bp.respond-to(tablet-and-desktop) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+
+      @include bp.respond-to(mobile) {
+        height: auto;
+        min-height: 300px;
+      }
+    }
+  }
+
+  &__contents-block {
+
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: left;
+
+    @include bp.respond-to(desktop) {
+      padding-inline: 72px;
+    }
+    @include bp.respond-to(desktop-medium) {
+      padding-inline: 111px;
+    }
+    @include bp.respond-to(tablet) {
+      padding-inline: 56px;
+    }
+    @include bp.respond-to(mobile) {
+      padding: 48px 29px;
+      max-width: unset;
+    }
+
+    &--white {
+      color: var.$color-white;
+
+      @include bp.respond-to(mobile) {
+        background-color: var.$color-black;
+      }
+    }
+    &--black {
+      color: var.$color-black;
+
+      @include bp.respond-to(mobile) {
+        background-color: var.$color-white;
+      }
+    }
+
+    &-inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      max-width: 400px;
+
+      @include bp.respond-to(mobile) {
+        max-width: unset;
+      }
+    }
+
+    &__sub-heading {
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &__heading {
+      text-transform: uppercase;
+      margin-top: 24px;
+      margin-bottom: 16px;
+
+      @include bp.respond-to(mobile) {
+        margin-top: 16px;
+        margin-bottom: 56px;
+      }
+    }
+
+    &__date {
+      margin-right: 9px;
+      opacity: .75;
+    }
+    &__author {
+
+    }
+
+    &__description {
+      margin-block: 24px;
+      opacity: .6;
+    }
+  }
+}

@@ -26,11 +26,11 @@
     width: 42%;
     text-align: left;
 
-    @include bp.respond-to(desktop-medium) {
-      padding-inline: 111px;
-    }
     @include bp.respond-to(desktop) {
       padding-inline: 72px;
+    }
+    @include bp.respond-to(desktop-medium) {
+      padding-inline: 111px;
     }
     @include bp.respond-to(tablet) {
       width: 62%;
