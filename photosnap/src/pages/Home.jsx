@@ -1,6 +1,15 @@
 import HeroTwoBlocks from "../components/HeroTwoBlocks";
 import StoriesGrid from "../components/StoriesGrid";
-import { heroBlocksData, storiesGridData } from "../data/homeData";
+import FeaturesShowcase from "../components/FeaturesShowcase";
+
+import { heroBlocksData } from "../data/homeData";
+import { storiesGridData } from "../data/storiesData";
+import { featuresShowcaseData } from "../data/featuresData";
+
+const processedstoriesGridData = storiesGridData.map(story => ({
+  ...story,
+  date: null,
+}));
 
 function Home() {
   return (
@@ -18,7 +27,9 @@ function Home() {
         />
       ))}
 
-      <StoriesGrid storiesData={storiesGridData} />
+      <StoriesGrid storiesData={processedstoriesGridData} />
+
+      <FeaturesShowcase featuresData={featuresShowcaseData} />
     </>
   )
 }

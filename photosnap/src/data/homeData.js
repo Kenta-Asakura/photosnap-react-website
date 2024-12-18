@@ -9,16 +9,6 @@ import DesignedForEveryoneDesktop from '../assets/home/desktop/designed-for-ever
 import DesignedForEveryoneTablet from '../assets/home/tablet/designed-for-everyone.jpg';
 import DesignedForEveryoneMobile from '../assets/home/mobile/designed-for-everyone.jpg';
 
-// Stories Grid Imgs
-import MountainsDesktop from '../assets/stories/desktop/mountains.jpg';
-import MountainsMobile from '../assets/stories/mobile/mountains.jpg';
-import CityScapesDesktop from '../assets/stories/desktop/cityscapes.jpg';
-import CityScapesMobile from '../assets/stories/mobile/cityscapes.jpg';
-import EighteenDaysDesktop from '../assets/stories/desktop/18-days-voyage.jpg';
-import EighteenDaysMobile from '../assets/stories/mobile/18-days-voyage.jpg';
-import ArchitecturalsDesktop from '../assets/stories/desktop/architecturals.jpg';
-import ArchitecturalsMobile from '../assets/stories/mobile/architecturals.jpg';
-
 export const heroBlocksData = [
   {
     contentsBgColor: 'black',
@@ -55,41 +45,6 @@ export const heroBlocksData = [
       desktop: DesignedForEveryoneDesktop,
       tablet: DesignedForEveryoneTablet,
       mobile: DesignedForEveryoneMobile,
-    },
-  },
-];
-
-export const storiesGridData = [
-  {
-    heading: 'The Mountains',
-    author: 'John Appleseed',
-    imgSrc: {
-      desktop: MountainsDesktop,
-      mobile: MountainsMobile,
-    },
-  },
-  {
-    heading: 'Sunset Cityscapes',
-    author: 'Benjamin Cruz',
-    imgSrc: {
-      desktop: CityScapesDesktop,
-      mobile: CityScapesMobile,
-    },
-  },
-  {
-    heading: '18 Days Voyage',
-    author: 'Alexei Borodin',
-    imgSrc: {
-      desktop: EighteenDaysDesktop,
-      mobile: EighteenDaysMobile,
-    },
-  },
-  {
-    heading: 'Architecturals',
-    author: 'Samantha Brooke',
-    imgSrc: {
-      desktop: ArchitecturalsDesktop,
-      mobile: ArchitecturalsMobile,
     },
   },
 ];

@@ -13,8 +13,9 @@ function App() {
 
       <main>
         {/* TEST */}
-        {/* <Home /> */}
-        <Stories />
+        <Home />
+        {/* <Stories /> */}
+
       </main>
 
       <Footer />
