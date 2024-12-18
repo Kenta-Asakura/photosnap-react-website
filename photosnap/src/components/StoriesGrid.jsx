@@ -16,13 +16,14 @@ function StoriesGrid({ storiesData }) {
                   alt={`${heading} Image`}
                 />
               </picture>
+              <div className="stories-grid__bg-image-overlay"></div>
             </div>
 
             <div className="stories-grid__contents-overlay">
-              {date && ( <p className="stories-grid__contents-overlay__date">{date}</p>)}
+              {date && ( <p className="stories-grid__contents-overlay__date text-small">{date}</p>)}
               <h3 className="stories-grid__contents-overlay__heading">{heading}</h3>
-              <p className="stories-grid__contents-overlay__author">by {author}</p>
-              <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--black">{btnText}</a>
+              <p className="stories-grid__contents-overlay__author text-small">by {author}</p>
+              <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--white">{btnText}</a>
             </div>
 
           </div>
