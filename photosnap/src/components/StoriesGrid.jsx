@@ -2,7 +2,7 @@ function StoriesGrid({ storiesData }) {
   return (
     <div className="stories-grid">
       {storiesData.map((story, index) => {
-        const { date, heading, author, btnText, imgSrc } = story;
+        const { date, heading, author, imgSrc } = story;
 
         return (
           <div key={index} className="stories-grid__item">
@@ -25,7 +25,7 @@ function StoriesGrid({ storiesData }) {
               )}
               <h3 className="stories-grid__contents-overlay__heading">{heading}</h3>
               <p className="stories-grid__contents-overlay__author text-small">by {author}</p>
-              <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--white">{btnText}</a>
+              <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--white">Read Story</a>
             </div>
 
           </div>

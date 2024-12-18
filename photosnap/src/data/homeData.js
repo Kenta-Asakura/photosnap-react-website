@@ -63,7 +63,6 @@ export const storiesGridData = [
   {
     heading: 'The Mountains',
     author: 'John Appleseed',
-    btnText: 'Read Story',
     imgSrc: {
       desktop: MountainsDesktop,
       mobile: MountainsMobile,
@@ -72,7 +71,6 @@ export const storiesGridData = [
   {
     heading: 'Sunset Cityscapes',
     author: 'Benjamin Cruz',
-    btnText: 'Read Story',
     imgSrc: {
       desktop: CityScapesDesktop,
       mobile: CityScapesMobile,
@@ -81,7 +79,6 @@ export const storiesGridData = [
   {
     heading: '18 Days Voyage',
     author: 'Alexei Borodin',
-    btnText: 'Read Story',
     imgSrc: {
       desktop: EighteenDaysDesktop,
       mobile: EighteenDaysMobile,
@@ -90,7 +87,6 @@ export const storiesGridData = [
   {
     heading: 'Architecturals',
     author: 'Samantha Brooke',
-    btnText: 'Read Story',
     imgSrc: {
       desktop: ArchitecturalsDesktop,
       mobile: ArchitecturalsMobile,

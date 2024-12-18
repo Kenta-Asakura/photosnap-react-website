@@ -18,9 +18,7 @@ function Home() {
         />
       ))}
 
-      <StoriesGrid
-        storiesData={storiesGridData}
-      />
+      <StoriesGrid storiesData={storiesGridData} />
     </>
   )
 }
