@@ -18,9 +18,23 @@ function Pricing() {
         />
       ))}
 
-      <PricingCard pricingCardData={pricingCardSubData} />
-      <PricingCard pricingCardData={pricingCardMainData} />
-      <PricingCard pricingCardData={pricingCardSubData2} />
+      <div className="pricing-cards">
+        <div className="container">
+
+          <div className="pricing-cards__toggle-wrapper">
+            <span className="pricing-cards__toggle-option">Monthly</span>
+            <button className="pricing-cards__toggle-switch"></button>
+            <span className="pricing-cards__toggle-option">Yearly</span>
+          </div>
+
+          <div className="pricing-cards__cards-wrapper">
+            <PricingCard pricingCardData={pricingCardSubData} />
+            <PricingCard pricingCardData={pricingCardMainData} />
+            <PricingCard pricingCardData={pricingCardSubData2} />
+          </div>
+
+        </div>
+      </div>
 
       <Newsletter />
     </>

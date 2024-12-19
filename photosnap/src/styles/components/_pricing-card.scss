@@ -2,6 +2,7 @@
 @use '../utils/variables' as var;
 
 .pricing-card {
+  padding: 56px 40px;
 
   &--main {
     background-color: var.$color-black;

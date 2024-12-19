@@ -1,0 +1,46 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
+
+.pricing-cards {
+  padding-top: 120px;
+  padding-bottom: 160px;
+
+  @include bp.respond-to(tablet) {
+    padding-top: 112px;
+  }
+  @include bp.respond-to(mobile) {
+    padding-top: 64px;
+  }
+
+  &__toggle {
+    &-wrapper {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+      column-gap: 32px;
+
+      @include bp.respond-to(mobile-devices) {
+        margin-bottom: 48px;
+      }
+    }
+
+    &-option{
+
+    }
+    &-switch {
+
+    }
+  }
+
+  &__cards {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include bp.respond-to(mobile) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
