@@ -9,7 +9,9 @@ function FeaturesShowcase({ featuresData, showcaseLayout = 'single' }) {
 
             return (
               <div key={index} className="features-showcase__item">
-                <img src={imgSrc} alt="" className="features-showcase__img" />
+                <div className="features-showcase__img-wrapper">
+                  <img src={imgSrc} alt="" className="features-showcase__img" />
+                </div>
 
                 <div className="features-showcase__contents">
                   <h3 className="features-showcase__contents-heading">{heading}</h3>

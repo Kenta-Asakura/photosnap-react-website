@@ -22,7 +22,7 @@ function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnT
           <div className={`hero-two-blocks__contents-block hero-two-blocks__contents-block--${contentsBgColor}`}>
             <div className="hero-two-blocks__contents-block-inner-wrapper">
               <h2 className="hero-two-blocks__contents-block__heading h2-large">{heading}</h2>
-              <p className="hero-two-blocks__contents-block__description">{paragraph}</p>
+              <p className="hero-two-blocks__contents-block__description text--opacity-lighter">{paragraph}</p>
               {optionalButton}
             </div>
           </div>

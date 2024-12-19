@@ -32,7 +32,10 @@ function Home() {
       <StoriesGrid storiesData={processedstoriesGridData} />
 
       <FeaturesShowcase featuresData={featuresShowcaseData} />
-      {/* <FeaturesShowcase featuresData={combinedFeaturesShowcaseData} /> */}
+      {/* <FeaturesShowcase
+        featuresData={combinedFeaturesShowcaseData}
+        showcaseLayout="double"
+      /> */}
     </>
   )
 }

@@ -1,10 +1,33 @@
+// Hero Blocks Imgs
+import FeaturesHeroDesktop from '../assets/features/desktop/hero.jpg';
+import FeaturesHeroTablet from '../assets/features/tablet/hero.jpg';
+import FeaturesHeroMobile from '../assets/features/mobile/hero.jpg';
+
+// Features Showcase 1 SVGs
 import ResponsiveSVG from '../assets/features/desktop/responsive.svg'
 import NoLimitSVG from '../assets/features/desktop/no-limit.svg';
 import EmbedSVG from '../assets/features/desktop/embed.svg';
 
+// Features Showcase 2 SVGs
 import CustomDomainSVG from '../assets/features/desktop/custom-domain.svg';
 import BoostExposureSVG from '../assets/features/desktop/boost-exposure.svg';
 import DragDropSVG from '../assets/features/desktop/drag-drop.svg';
+
+
+export const heroBlocksData = [
+  {
+    contentsBgColor: 'black',
+    heading: 'Features',
+    paragraph: 'We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.',
+    btnText: 'Get An Invite',
+    imgHeight: 's',
+    imgSrc: {
+      desktop: FeaturesHeroDesktop,
+      tablet: FeaturesHeroTablet,
+      mobile: FeaturesHeroMobile,
+    },
+  }
+];
 
 export const featuresShowcaseData = [
   {
@@ -21,7 +44,7 @@ export const featuresShowcaseData = [
     heading: 'Available to Embed',
     paragraph: 'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.',
     imgSrc: EmbedSVG,
-  },
+  }
 ]
 
 export const featuresShowcaseData2 = [
@@ -39,5 +62,5 @@ export const featuresShowcaseData2 = [
     heading: 'Drag & Drop Image',
     paragraph: 'Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.',
     imgSrc: DragDropSVG,
-  },
+  }
 ]
