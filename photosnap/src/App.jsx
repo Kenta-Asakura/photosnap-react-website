@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
 import Features from "./pages/Features";
+import Pricing from "./pages/Pricing";
 
 function App() {
   // const [currentPage, setCurrentPage] = useState('home');
@@ -11,15 +12,14 @@ function App() {
   return (
     <>
       <Header />
-
       <main>
 
         {/* <Home /> */}
         {/* <Stories /> */}
-        <Features />
+        {/* <Features /> */}
+        <Pricing />
 
       </main>
-
       <Footer />
     </>
   )

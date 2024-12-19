@@ -29,6 +29,8 @@ export const heroBlocksData = [
   }
 ];
 
+
+// Features Showcase Datas
 export const featuresShowcaseData = [
   {
     heading: '100% Responsive',

@@ -1,0 +1,36 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
+.pricing-card {
+
+  &--main {
+    background-color: var.$color-black;
+    color: var.$color-white;
+  }
+  &--sub {
+    background-color: var.$color-gray;
+  }
+
+  &__plan {
+    &-heading {
+
+    }
+
+    &-description {
+
+    }
+  }
+
+  &__rate {
+    &-amount {
+
+    }
+    &_duration {
+
+    }
+  }
+
+  &__btn {
+
+  }
+}
