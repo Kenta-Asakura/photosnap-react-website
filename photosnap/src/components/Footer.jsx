@@ -1,8 +1,9 @@
 import FooterLogo from '../assets/shared/desktop/logo-white.svg';
+import Button from './Button';
 import Nav from "./Nav";
 import SocialLinks from './SocialLinks';
 
-function Footer(params) {
+function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner-wrapper container">
@@ -15,7 +16,12 @@ function Footer(params) {
         </div>
 
         <div className="footer__block-right">
-          <a className='footer__invite-btn btn-secondary btn-secondary--white'>Get an invite </a>
+          <Button
+            buttonClassName='footer__invite-btn'
+            variant='secondary'
+            btnColor='white'
+            btnText='Get an invite'
+          />
           <p className='footer__copyright'>Copyright 2019. All Rights Reserved</p>
         </div>
       </div>

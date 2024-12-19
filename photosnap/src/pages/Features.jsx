@@ -14,6 +14,7 @@ function Features() {
           contentsBgColor={block.contentsBgColor}
           heading={block.heading}
           paragraph={block.paragraph}
+          btnText={block.btnText}
           imgHeight={block.imgHeight}
           imgSrc={block.imgSrc}
         />
