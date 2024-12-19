@@ -1,5 +1,6 @@
 import HeroTwoBlocks from "../components/HeroTwoBlocks";
 import FeaturesShowcase from "../components/FeaturesShowcase";
+import NewsLetter from "../components/NewsLetter";
 import { heroBlocksData, featuresShowcaseData, featuresShowcaseData2 } from "../data/featuresData";
 
 const combinedFeaturesShowcaseData = [...featuresShowcaseData, ...featuresShowcaseData2];
@@ -24,6 +25,8 @@ function Features() {
         featuresData={combinedFeaturesShowcaseData}
         showcaseLayout="double"
       />
+
+      <NewsLetter />
     </>
   )
 }

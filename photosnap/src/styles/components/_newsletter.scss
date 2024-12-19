@@ -1,5 +1,37 @@
-.newsletter {
-  &-inner-wrapper {
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
 
+.newsletter {
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  background-image: url('../assets/shared/desktop/bg-beta.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include bp.respond-to(tablet) {
+    background-image: url('../assets/shared/tablet/bg-beta.jpg');
+  }
+  @include bp.respond-to(mobile) {
+    background-image: url('../assets/shared/mobile/bg-beta.jpg');
+  }
+
+  &-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 68px;
+    text-align: left;
+
+    @include bp.respond-to(mobile) {
+      flex-direction: column;
+      row-gap: 24px;
+      padding-block: 64px;
+    }
+  }
+
+  &__heading {
+    max-width: 400px;
+    text-transform: uppercase;
   }
 }
