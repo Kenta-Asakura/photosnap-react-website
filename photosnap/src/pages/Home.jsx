@@ -4,12 +4,14 @@ import FeaturesShowcase from "../components/FeaturesShowcase";
 
 import { heroBlocksData } from "../data/homeData";
 import { storiesGridData } from "../data/storiesData";
-import { featuresShowcaseData } from "../data/featuresData";
+import { featuresShowcaseData, featuresShowcaseData2 } from "../data/featuresData";
 
 const processedstoriesGridData = storiesGridData.map(story => ({
   ...story,
   date: null,
 }));
+
+const combinedFeaturesShowcaseData = [...featuresShowcaseData, ...featuresShowcaseData2];
 
 function Home() {
   return (
@@ -30,6 +32,7 @@ function Home() {
       <StoriesGrid storiesData={processedstoriesGridData} />
 
       <FeaturesShowcase featuresData={featuresShowcaseData} />
+      {/* <FeaturesShowcase featuresData={combinedFeaturesShowcaseData} /> */}
     </>
   )
 }

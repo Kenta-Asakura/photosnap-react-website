@@ -1,0 +1,60 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as var;
+
+.features-showcase {
+  &-inner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-inline: auto;
+  }
+
+  &--single {
+    min-height: 236px;
+    margin-block: 120px;
+
+    @include bp.respond-to(mobile-devices) {
+      grid-template-columns: 1fr;
+    }
+    @include bp.respond-to(tablet) {
+      max-width: 457px;
+      row-gap: 80px;
+    }
+    @include bp.respond-to(mobile) {
+      row-gap: 56px;
+    }
+  }
+  &--double {
+    margin-block: 160px;
+
+    @include bp.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include bp.respond-to(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    // height: 236px;
+
+    @include bp.respond-to(tablet) {
+    }
+    @include bp.respond-to(mobile) {
+    }
+  }
+
+  &__contents {
+    // max-height: 116px;
+
+    &-heading {
+      margin-bottom: 16px;
+    }
+  }
+}

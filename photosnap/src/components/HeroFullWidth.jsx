@@ -24,11 +24,11 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
             <h2 className="hero-full-width__contents-block__heading h2-large">{heading}</h2>
 
             <div>
-              <span className="hero-full-width__contents-block__date">{publishDate}</span>
+              <span className="hero-full-width__contents-block__date text--opacity-light">{publishDate}</span>
               <span className="hero-full-width__contents-block__author">{author}</span>
             </div>
 
-            <p className="hero-full-width__contents-block__description">{paragraph}</p>
+            <p className="hero-full-width__contents-block__description text--opacity-lighter">{paragraph}</p>
             <a href="" className={`btn-secondary btn-secondary--${btnColor}`}>
               {btnText}
             </a>
