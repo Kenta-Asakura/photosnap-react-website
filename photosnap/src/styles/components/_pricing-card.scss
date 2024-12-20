@@ -2,36 +2,68 @@
 @use '../utils/variables' as var;
 
 .pricing-card {
+  min-height: 407px;
   padding: 56px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-between;
+  row-gap: 40px;
+
+  @include bp.respond-to(tablet) {
+    grid-template-columns: minmax(0, 240px) 1fr;
+    min-height: 270px;
+  }
+  @include bp.respond-to(mobile-devices) {
+    padding: 40px;
+  }
+  @include bp.respond-to(mobile) {
+    padding-inline: 0;
+  }
 
   &--main {
     background-color: var.$color-black;
     color: var.$color-white;
+
+    @include bp.respond-to(desktop) {
+      min-height: 470px;
+      padding-block: 86px;
+    }
   }
   &--sub {
     background-color: var.$color-gray;
   }
 
   &__plan {
-    &-heading {
-
+    @include bp.respond-to(tablet) {
+      text-align: left;
+    }
+    @include bp.respond-to(mobile) {
+      padding-inline: 21px;
     }
 
-    &-description {
-
+    &-heading {
+      margin-bottom: 18px;
     }
   }
 
   &__rate {
-    &-amount {
-
+    @include bp.respond-to(tablet) {
+      text-align: right;
     }
-    &_duration {
+    @include bp.respond-to(mobile) {
+      padding-inline: 21px;
+    }
 
+    &-amount {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 4.17px;
     }
   }
 
   &__btn {
-
+    @include bp.respond-to(mobile) {
+      margin-inline: 36px;
+    }
   }
 }

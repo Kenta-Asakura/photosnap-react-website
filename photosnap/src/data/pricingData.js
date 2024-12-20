@@ -24,7 +24,7 @@ export const pricingCardMainData = [
   {
     planHeading: 'Pro',
     planDescription: 'More advanced features available. Recommended for photography veterans and professionals.',
-    rateAmount: '$39.00',
+    rateAmount: 39,
     cardVariant: 'main'
   }
 ];
@@ -33,7 +33,7 @@ export const pricingCardSubData = [
   {
     planHeading: 'Basic',
     planDescription: 'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
-    rateAmount: '$19.00',
+    rateAmount: 19,
     cardVariant: 'sub'
   }
 ];
@@ -42,7 +42,7 @@ export const pricingCardSubData2= [
   {
     planHeading: 'Business',
     planDescription: 'Additional features available such as more detailed metrics. Recommended for business owners.',
-    rateAmount: '$99.00',
+    rateAmount: 99,
     cardVariant: 'sub'
   }
 ]

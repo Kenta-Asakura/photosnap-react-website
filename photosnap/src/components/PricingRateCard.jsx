@@ -1,22 +1,26 @@
 import Button from "./Button";
 
-function PricingCard({ pricingCardData }) {
+function PricingCard({ pricingCardData, isYearly }) {
   return (
     pricingCardData.map((card, index) => {
       const { planHeading, planDescription, rateAmount, cardVariant } = card;
       const variantClass = `pricing-card--${cardVariant}`;
       const btnColor = cardVariant === 'main' ? 'white' : 'black';
 
+      console.log(rateAmount);
+      const displayedRateAmount = isYearly ? rateAmount * 10 : rateAmount;
+      const rateDuration = isYearly ? "year" : "month";
+
       return(
         <div key={index} className={`pricing-card ${variantClass}`}>
           <div className="pricing-card__plan">
-            <p className="pricing-card__plan-heading">{planHeading}</p>
+            <h2 className="pricing-card__plan-heading">{planHeading}</h2>
             <p className="pricing-card__plan-description text--opacity-lighter">{planDescription}</p>
           </div>
 
           <div className="pricing-card__rate">
-            <p className="pricing-card__rate-amount">{rateAmount}</p>
-            <p className="pricing-card__rate-duration text--opacity-lighter">per month</p>
+            <p className="pricing-card__rate-amount">${displayedRateAmount}.00</p>
+            <p className="pricing-card__rate-duration text--opacity-lighter">per {rateDuration}</p>
           </div>
 
           <Button

@@ -3,14 +3,17 @@
 
 
 .pricing-cards {
-  padding-top: 120px;
-  padding-bottom: 160px;
+  // padding-top: 120px;
+  // padding-bottom: 160px;
+  padding-block: 120px;
 
   @include bp.respond-to(tablet) {
-    padding-top: 112px;
+    // padding-top: 112px;
+    padding-block: 112px;
   }
   @include bp.respond-to(mobile) {
-    padding-top: 64px;
+    // padding-top: 64px;
+    padding-block: 64px;
   }
 
   &__toggle {
@@ -26,7 +29,11 @@
     }
 
     &-option{
+      opacity: 50%;
 
+      &--active {
+        opacity: 1;
+      }
     }
     &-switch {
 
@@ -37,9 +44,12 @@
     &-wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      column-gap: 30px;
 
-      @include bp.respond-to(mobile) {
+      @include bp.respond-to(mobile-devices) {
         grid-template-columns: 1fr;
+        row-gap: 24px;
       }
     }
   }
