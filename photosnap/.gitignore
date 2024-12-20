@@ -35,7 +35,7 @@ node_modules
 dist
 dist-ssr
 *.local
-./starter-code
+.starter-code
 
 # Editor directories and files
 .vscode/*
@@ -47,4 +47,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
