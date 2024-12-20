@@ -26,16 +26,13 @@ function Home() {
           btnText={block.btnText}
           imgHeight={block.imgHeight}
           imgSrc={block.imgSrc}
+          // animationClass={index % 2 === 0 ? 'slide-from-left' : 'slide-from-right'}
         />
       ))}
 
       <StoriesGrid storiesData={processedstoriesGridData} />
 
       <FeaturesShowcase featuresData={featuresShowcaseData} />
-      {/* <FeaturesShowcase
-        featuresData={combinedFeaturesShowcaseData}
-        showcaseLayout="double"
-      /> */}
     </>
   )
 }

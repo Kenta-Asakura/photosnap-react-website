@@ -1,9 +1,12 @@
+import { useAnimation } from "../hooks/useAnimation";
+
 function FeaturesShowcase({ featuresData, showcaseLayout = 'single' }) {
+  const { ref, animationClass } = useAnimation('features-showcase', 'fade-in');
+
   return (
-    <div className="features-showcase">
+    <div ref={ref} className={`features-showcase ${animationClass}`}>
       <div className="container">
         <div className={`features-showcase-inner-wrapper features-showcase--${showcaseLayout}`}>
-
           {featuresData.map((feature, index) => {
             const { heading, paragraph, imgSrc } = feature;
 

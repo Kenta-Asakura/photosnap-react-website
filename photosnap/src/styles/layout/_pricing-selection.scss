@@ -1,6 +1,4 @@
 @use '../utils/breakpoints' as bp;
-@use '../utils/variables' as var;
-
 
 .pricing-cards {
   // padding-top: 120px;
@@ -34,9 +32,6 @@
       &--active {
         opacity: 1;
       }
-    }
-    &-switch {
-
     }
   }
 
