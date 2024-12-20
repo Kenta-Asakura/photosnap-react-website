@@ -1,11 +1,15 @@
+import { useAnimation } from "../hooks/useAnimation";
+
 function StoriesGrid({ storiesData }) {
   return (
     <div className="stories-grid">
       {storiesData.map((story, index) => {
         const { date, heading, author, imgSrc } = story;
+        const { ref, animationClass } = useAnimation('stories-grid__item', 'fade-in');
 
         return (
-          <div key={index} className="stories-grid__item">
+          // <div key={index} className="stories-grid__item">
+          <div key={index} ref={ref} className={`stories-grid__item ${animationClass}`}>
 
             <div className="stories-grid__bg-image">
               <picture>

@@ -11,8 +11,6 @@ const processedstoriesGridData = storiesGridData.map(story => ({
   date: null,
 }));
 
-const combinedFeaturesShowcaseData = [...featuresShowcaseData, ...featuresShowcaseData2];
-
 function Home() {
   return (
     <>

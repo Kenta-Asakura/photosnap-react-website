@@ -17,7 +17,7 @@ function MainNav({ setCurrentPage }) {
 
   return (
     <nav className="main-nav">
-      <a className="header-logo" href="">
+      <a className="header-logo" href="/" onClick={(e) => { e.preventDefault(); setCurrentPage("home"); }}>
         <img src={HeaderLogo} alt="Photosnap Header Logo" />
       </a>
 
