@@ -3,7 +3,7 @@ import Button from './Button';
 import Nav from "./Nav";
 import SocialLinks from './SocialLinks';
 
-function Footer() {
+function Footer({ setCurrentPage }) {
   return (
     <footer className="footer">
       <div className="footer-inner-wrapper container">
@@ -11,7 +11,7 @@ function Footer() {
           <a className="footer__logo" href="">
             <img src={FooterLogo} alt="Photosnap Footer Logo" />
           </a>
-          <Nav className="footer__nav" type="footer" />
+          <Nav className="footer__nav" type="footer" setCurrentPage={setCurrentPage} />
           <SocialLinks className="footer__social-links" />
         </div>
 

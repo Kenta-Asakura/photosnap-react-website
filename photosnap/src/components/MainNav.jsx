@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Nav from "./Nav";
-import HeaderLogo from '../assets/shared/desktop/logo-black.svg';
-import HamburgerMenuIcon from '../assets/shared/mobile/menu.svg';
-import CloseIcon from '../assets/shared/mobile/close.svg';
+import HeaderLogo from "../assets/shared/desktop/logo-black.svg";
+import HamburgerMenuIcon from "../assets/shared/mobile/menu.svg";
+import CloseIcon from "../assets/shared/mobile/close.svg";
 
-function MainNav() {
+function MainNav({ setCurrentPage }) {
   const [isMobileMenuExpanded, setMobileMenuExpanded] = useState(false);
 
   function toggleMobileMenu() {
@@ -13,7 +13,7 @@ function MainNav() {
 
   const mobileMenuIcon = isMobileMenuExpanded
     ? <img className="icon-close" src={CloseIcon} alt="Close Mobile Menu Icon" />
-    : <img className="icon-open" src={HamburgerMenuIcon} alt="Open Mobile Menu Icon" />
+    : <img className="icon-open" src={HamburgerMenuIcon} alt="Open Mobile Menu Icon" />;
 
   return (
     <nav className="main-nav">
@@ -26,12 +26,12 @@ function MainNav() {
       </button>
 
       <div className={`main-nav__list-wrapper ${isMobileMenuExpanded ? "main-nav__list-wrapper--expanded" : ""}`}>
-        <Nav className="main-nav__list" type="header" />
+        <Nav className="main-nav__list" type="header" setCurrentPage={setCurrentPage} />
 
         <a href="" className="btn btn-primary btn-primary--black">Get an invite</a>
       </div>
     </nav>
-  )
+  );
 }
 
 export default MainNav;

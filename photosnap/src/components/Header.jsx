@@ -1,10 +1,10 @@
 import MainNav from "./MainNav";
 
-function Header(params) {
+function Header({ setCurrentPage }) {
   return (
     <header className="header">
       <div className="header-inner-wrapper container-fluid">
-        <MainNav></MainNav>
+        <MainNav setCurrentPage={setCurrentPage}></MainNav>
       </div>
     </header>
   )

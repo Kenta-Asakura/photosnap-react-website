@@ -1,5 +1,4 @@
-// Nav.jsx
-const Nav = ({ className, type }) => {
+const Nav = ({ className, type, setCurrentPage }) => {
   const links = [
     { href: '/stories', label: 'Stories' },
     { href: '/features', label: 'Features' },
@@ -15,7 +14,15 @@ const Nav = ({ className, type }) => {
       <ul>
         {links.map((link) => (
           <li key={link.href}>
-            <a href={link.href}>{link.label}</a>
+            <a
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default behavior
+                setCurrentPage(link.label.toLowerCase()); // Set current page
+              }}
+            >
+              {link.label}
+            </a>
           </li>
         ))}
       </ul>
