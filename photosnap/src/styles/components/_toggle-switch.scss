@@ -15,12 +15,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var.$color-gray;
+    background-color: var.$color-gray-dark;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   &__slider {
     position: absolute;
     left: 4px;

@@ -30,8 +30,9 @@
     }
   }
   &--sub {
-    background-color: var.$color-gray;
+    background-color: var.$color-gray-dark;
   }
+
 
   &__plan {
     @include bp.respond-to(tablet) {
@@ -62,6 +63,11 @@
   }
 
   &__btn {
+    &:hover {
+      color: var.$color-black;
+      background-color: var.$color-gray-light;
+    }
+
     @include bp.respond-to(mobile) {
       margin-inline: 36px;
     }

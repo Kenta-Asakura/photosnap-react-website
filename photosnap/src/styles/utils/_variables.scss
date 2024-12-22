@@ -4,8 +4,9 @@ $color-secondary: #BC7198;
 $color-tertiary: #5A77FF;
 
 $color-black: #000000;
-$color-gray: #DFDFDF;
 $color-white: #FFFFFF;
+$color-gray-light: #F5F5F5;
+$color-gray-dark: #DFDFDF;
 
 // Gradient Definition
 $gradient: linear-gradient(90deg, $color-primary 0%, $color-secondary 52%, $color-tertiary 100%);
@@ -24,6 +25,9 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 
-
-// Header heights
+// Header height
 $header-height: 72px;
+
+
+// Transition
+$transition: .2s ease-in-out;

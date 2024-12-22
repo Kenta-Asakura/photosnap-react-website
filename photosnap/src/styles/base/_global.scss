@@ -34,14 +34,14 @@ a {
   color: var.$color-black;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color var.$transition;
 
   &:hover, &:focus {
-    text-decoration: underline;
     cursor: pointer;
   }
 
   &:hover {
-    color: var.$color-gray;
+    color: var.$color-gray-dark;
   }
 }
 
