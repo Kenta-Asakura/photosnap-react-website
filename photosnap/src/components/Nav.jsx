@@ -1,4 +1,4 @@
-const Nav = ({ className, type, setCurrentPage }) => {
+const Nav = ({ className, type, setCurrentPage, toggleMobileMenu }) => {
   const links = [
     { href: '/stories', label: 'Stories' },
     { href: '/features', label: 'Features' },
@@ -17,8 +17,11 @@ const Nav = ({ className, type, setCurrentPage }) => {
             <a
               href={link.href}
               onClick={(e) => {
-                e.preventDefault(); // Prevent default behavior
-                setCurrentPage(link.label.toLowerCase()); // Set current page
+                e.preventDefault();
+                setCurrentPage(link.label.toLowerCase());
+                if (toggleMobileMenu) {
+                  toggleMobileMenu();
+                }
               }}
             >
               {link.label}

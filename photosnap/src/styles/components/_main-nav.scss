@@ -29,36 +29,17 @@
     // }
   }
 
-  &__list-wrapper {
-    display: contents;
-    width: 100%;
-
+  &__invite-btn {
     @include bp.respond-to(mobile) {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      width: 100%;
-      background-color: var.$color-white;
-
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      padding-inline: 9px;
-      padding-block: 32px;
-
-      overflow: hidden;
-      visibility: hidden;
-      max-height: 0;
-      transition: all .3s ease-in-out
-    }
-
-    &--expanded {
-      max-height: 300px;
-      visibility: visible;
+      display: none;
     }
   }
 
   &__list {
+    @include bp.respond-to(mobile) {
+      display: none;
+    }
+
     ul {
       display: flex;
       gap: 37px;
@@ -66,19 +47,6 @@
 
       @include bp.respond-to(tablet) {
         gap: 30px;
-      }
-      @include bp.respond-to(mobile) {
-        flex-direction: column;
-        gap: 20px;
-
-        &:after {
-          content: "";
-          display: block;
-          height: 1px;
-          width: 100%;
-          opacity: .25;
-          background-color: var.$color-black;
-        }
       }
     }
   }

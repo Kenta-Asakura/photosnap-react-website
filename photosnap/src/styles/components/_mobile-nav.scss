@@ -1,0 +1,52 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/variables' as var;
+
+.mobile-nav {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+
+  @include bp.respond-to(mobile) {
+    z-index: 40;
+    top: -230px;
+    left: 0;
+    width: 100%;
+    background-color: var.$color-white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 32px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+
+    max-height: 300px;
+
+    &--expanded {
+      top: 72px;
+      visibility: visible;
+    }
+
+    &__list {
+      ul {
+        display: flex;
+        list-style: none;
+
+        @include bp.respond-to(mobile) {
+          flex-direction: column;
+          gap: 20px;
+
+          &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            opacity: .25;
+            background-color: var.$color-black;
+          }
+        }
+      }
+    }
+  }
+
+}

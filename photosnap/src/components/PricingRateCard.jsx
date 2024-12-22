@@ -7,7 +7,6 @@ function PricingCard({ pricingCardData, isYearly }) {
       const variantClass = `pricing-card--${cardVariant}`;
       const btnColor = cardVariant === 'main' ? 'white' : 'black';
 
-      console.log(rateAmount);
       const displayedRateAmount = isYearly ? rateAmount * 10 : rateAmount;
       const rateDuration = isYearly ? "year" : "month";
 
