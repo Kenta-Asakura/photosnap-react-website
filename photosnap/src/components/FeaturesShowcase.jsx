@@ -7,10 +7,10 @@ function FeaturesShowcase({ featuresData, showcaseLayout = 'single' }) {
         <div className={`features-showcase-inner-wrapper features-showcase--${showcaseLayout}`}>
           {featuresData.map((feature, index) => {
             const { heading, paragraph, imgSrc } = feature;
-            const { ref, animationClass } = useAnimation("features-showcase__item", "fade-in");
+            const { ref, animationClass } = useAnimation('fade-in--initial', 'fade-in');
 
             return (
-              <div key={index} ref={ref} className={`features-showcase__item ${animationClass}`}>
+              <div key={index} ref={ref} className={`features-showcase__item ${animationClass} hidden`}>
                 <div className="features-showcase__img-wrapper">
                   <img src={imgSrc} alt="" className="features-showcase__img" />
                 </div>

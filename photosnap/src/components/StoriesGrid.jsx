@@ -5,11 +5,11 @@ function StoriesGrid({ storiesData }) {
     <div className="stories-grid">
       {storiesData.map((story, index) => {
         const { date, heading, author, imgSrc } = story;
-        const { ref, animationClass } = useAnimation('stories-grid__item', 'fade-in');
+        const { ref, animationClass } = useAnimation('fade-in--initial', 'fade-in');
 
         return (
           // <div key={index} className="stories-grid__item">
-          <div key={index} ref={ref} className={`stories-grid__item ${animationClass}`}>
+          <div key={index} ref={ref} className={`stories-grid__item ${animationClass} `}>
 
             <div className="stories-grid__bg-image">
               <picture>

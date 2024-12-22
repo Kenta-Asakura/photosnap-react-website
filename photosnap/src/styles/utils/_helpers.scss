@@ -61,36 +61,50 @@
 
 @keyframes slideFromLeft {
   from {
-    // transform: translateX(-100%);
-    transform: translate3d(-100%, 0px, 0px);
-    opacity: 0;
+    transform: translateX(-100%);
+    // opacity: 0;
   }
   to {
-    // transform: translateX(0);
-    transform: none;
-    opacity: 1;
+    transform: translateX(0);
+    // opacity: 1;
   }
 }
 
 @keyframes slideFromRight {
   from {
     transform: translateX(100%);
-    opacity: 0;
+    // opacity: 0;
   }
   to {
     transform: translateX(0);
-    opacity: 1;
+    // opacity: 1;
   }
 }
 
 .fade-in {
+  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
 
 .slide-from-left {
+  transform: translateX(-100%);
   animation: slideFromLeft 1s ease-in-out forwards;
 }
 
 .slide-from-right {
   animation: slideFromRight 1s ease-in-out forwards;
+  transform: translateX(0);
+}
+
+// Intial states
+.fade-in--initial {
+  opacity: 0;
+}
+
+.slide-from-left--initial {
+  transform: translateX(-100%);
+}
+
+.slide-from-right--initial {
+  transform: translateX(100%);
 }
