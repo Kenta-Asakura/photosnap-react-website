@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 export const useAnimation = (initialClass = '', animationClass = '') => {
   const { ref, inView } = useInView({
     threshold: 0.2,
+    triggerOnce: true,
   });
 
   const [hasAnimated, setHasAnimated] = useState(false);

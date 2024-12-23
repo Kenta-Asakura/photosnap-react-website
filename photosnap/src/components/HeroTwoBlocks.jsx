@@ -17,7 +17,7 @@ function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragrap
   const mobileImg = imgSrc?.mobile;
 
   const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
-  const { ref, animationClass } = useAnimation('', animation);
+  const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
 
   return (
     <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
