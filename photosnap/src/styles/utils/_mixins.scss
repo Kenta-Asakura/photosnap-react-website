@@ -4,3 +4,24 @@
   justify-content: center;
 }
 
+@mixin btn-primary-theme($text-color, $bg-color, $hover-text-color, $hover-bg-color) {
+  color: $text-color;
+  background-color: $bg-color;
+
+  &:hover {
+    color: $hover-text-color;
+    background-color: $hover-bg-color;
+  }
+}
+
+@mixin btn-secondary-theme($color, $color-suffix) {
+  color: $color;
+
+  &:hover, &:focus {
+    color: $color;
+  }
+
+  &::after {
+    background-image: url('src/assets/shared/desktop/arrow-#{$color-suffix}.svg');
+  }
+}

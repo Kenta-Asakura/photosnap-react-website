@@ -18,22 +18,10 @@
   transition: color, background-color var.$transition;
 
   &--black {
-    color: var.$color-white;
-    background-color: var.$color-black;
-
-    &:hover {
-      color: var.$color-black;
-      background-color: var.$color-gray-dark;
-    }
+    @include mix.btn-primary-theme(var.$color-white, var.$color-black, var.$color-black, var.$color-gray-dark);
   }
   &--white {
-    color: var.$color-black;
-    background-color: var.$color-white;
-
-    &:hover {
-      color: var.$color-white;
-      background-color: var.$color-black;
-    }
+    @include mix.btn-primary-theme(var.$color-black, var.$color-white, var.$color-white, var.$color-black);
   }
 }
 
@@ -45,7 +33,6 @@
   transition: text-decoration var.$transition;
 
   &:hover, &:focus {
-    color: unset;
     text-decoration: underline;
   }
 
@@ -59,17 +46,9 @@
   }
 
   &--black {
-    color: var.$color-black;
-
-    &::after {
-      background-image: url('src/assets/shared/desktop/arrow-black.svg');
-    }
+    @include mix.btn-secondary-theme(var.$color-black, 'black');
   }
   &--white {
-    color: var.$color-white;
-
-    &::after {
-      background-image: url('src/assets/shared/desktop/arrow-white.svg');
-    }
+    @include mix.btn-secondary-theme(var.$color-white, 'white');
   }
 }
