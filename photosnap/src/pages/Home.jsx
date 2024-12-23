@@ -17,6 +17,7 @@ function Home() {
       {heroBlocksData.map((block, index) => (
         <HeroTwoBlocks
           key={index}
+          index={index + 1}
           blocksLayout={block.blocksLayout}
           contentsBgColor={block.contentsBgColor}
           heading={block.heading}
@@ -24,7 +25,6 @@ function Home() {
           btnText={block.btnText}
           imgHeight={block.imgHeight}
           imgSrc={block.imgSrc}
-          // animationClass={index % 2 === 0 ? 'slide-from-left' : 'slide-from-right'}
         />
       ))}
 

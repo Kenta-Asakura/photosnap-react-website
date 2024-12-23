@@ -98,9 +98,13 @@
       }
     }
 
-    // a {
-    //   &:hover
-    // }
+    a {
+      color: var.$color-white;
+
+      &:hover {
+        color: rgba(var.$color-white, .3);
+      }
+    }
   }
 
   &__social-links {

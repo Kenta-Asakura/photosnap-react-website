@@ -1,10 +1,14 @@
+import { useAnimation } from "../hooks/useAnimation";
+
 function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, btnText, btnColor, textColor, bgImgSrc}) {
   const desktopImg = bgImgSrc?.desktop;
   const tabletImg = bgImgSrc?.tablet;
   const mobileImg = bgImgSrc?.mobile;
 
+  const { ref, animationClass } = useAnimation('', 'slide-from-left');
+
   return (
-    <section className="hero-full-width">
+    <section ref={ref} className={`hero-full-width ${animationClass}`}>
       <div className="hero-full-width-inner-wrapper">
 
         <div className="hero-full-width__bg-image">

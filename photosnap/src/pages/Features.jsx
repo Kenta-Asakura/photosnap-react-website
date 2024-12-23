@@ -11,6 +11,7 @@ function Features() {
       {heroBlocksData.map((block, index) => (
         <HeroTwoBlocks
           key={index}
+          index={index + 1}
           blocksLayout={block.blocksLayout}
           contentsBgColor={block.contentsBgColor}
           heading={block.heading}
@@ -20,10 +21,12 @@ function Features() {
           imgSrc={block.imgSrc}
         />
       ))}
+
       <FeaturesShowcase
         featuresData={combinedFeaturesShowcaseData}
         showcaseLayout="double"
       />
+
       <Newsletter />
     </>
   )

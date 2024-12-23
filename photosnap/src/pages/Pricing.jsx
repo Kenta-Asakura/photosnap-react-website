@@ -17,6 +17,7 @@ function Pricing() {
       {pricingHeroData.map((block, index) => (
         <HeroTwoBlocks
           key={index}
+          index={index + 1}
           blocksLayout={block.blocksLayout}
           contentsBgColor={block.contentsBgColor}
           heading={block.heading}

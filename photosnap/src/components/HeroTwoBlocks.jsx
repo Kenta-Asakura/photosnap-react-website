@@ -1,4 +1,6 @@
-function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnText, imgHeight, imgSrc }) {
+import { useAnimation } from "../hooks/useAnimation";
+
+function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragraph, btnText, imgHeight, imgSrc }) {
   // Settings
   // blocksLayout: default = '', 'reverse'
   // contentsBgColor: 'black', 'white'
@@ -14,8 +16,13 @@ function HeroTwoBlocks({ blocksLayout, contentsBgColor, heading, paragraph, btnT
   const tabletImg = imgSrc?.tablet;
   const mobileImg = imgSrc?.mobile;
 
+  const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
+  const { ref, animationClass } = useAnimation('', animation);
+
   return (
-    <section className="hero-two-blocks">
+    // <section className="hero-two-blocks">
+    <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
+
       <div className="container-fluid">
         <div className={`hero-two-blocks-inner-wrapper${blocksLayout ? ` hero-two-blocks-inner-wrapper--${blocksLayout}` : ''}`}>
 

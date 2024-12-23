@@ -11,7 +11,11 @@ function Footer({ setCurrentPage }) {
           <a className="footer__logo" href="">
             <img src={FooterLogo} alt="Photosnap Footer Logo" />
           </a>
-          <Nav className="footer__nav" type="footer" setCurrentPage={setCurrentPage} />
+          <Nav
+            className="footer__nav"
+            type="footer"
+            setCurrentPage={setCurrentPage}
+          />
           <SocialLinks className="footer__social-links" />
         </div>
 

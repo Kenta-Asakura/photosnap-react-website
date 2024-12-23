@@ -73,11 +73,11 @@
 @keyframes slideFromRight {
   from {
     transform: translateX(100%);
-    // opacity: 0;
+    opacity: 0;
   }
   to {
     transform: translateX(0);
-    // opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -85,26 +85,21 @@
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
-
-.slide-from-left {
-  transform: translateX(-100%);
-  animation: slideFromLeft 1s ease-in-out forwards;
-}
-
-.slide-from-right {
-  animation: slideFromRight 1s ease-in-out forwards;
-  transform: translateX(0);
-}
-
-// Intial states
 .fade-in--initial {
   opacity: 0;
 }
 
-.slide-from-left--initial {
-  transform: translateX(-100%);
+.slide-from-left,
+.slide-from-right {
+  transform: translateX(0);
+}
+.slide-from-left {
+  animation: slideFromLeft .9s ease-in-out forwards;
+}
+.slide-from-right {
+  animation: slideFromRight .9s ease-in-out forwards;
 }
 
-.slide-from-right--initial {
+.slide-from-left--initial {
   transform: translateX(100%);
 }
