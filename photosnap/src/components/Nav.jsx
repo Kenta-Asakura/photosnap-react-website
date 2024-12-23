@@ -19,10 +19,14 @@ const Nav = ({ className, type, setCurrentPage, toggleMobileMenu }) => {
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage(link.label.toLowerCase());
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
                 if (toggleMobileMenu) {
                   toggleMobileMenu();
                 }
+
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 0);
               }}
             >
               {link.label}

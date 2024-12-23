@@ -8,7 +8,6 @@ function StoriesGrid({ storiesData }) {
         const { ref, animationClass } = useAnimation('fade-in--initial', 'fade-in');
 
         return (
-          // <div key={index} className="stories-grid__item">
           <div key={index} ref={ref} className={`stories-grid__item ${animationClass} `}>
 
             <div className="stories-grid__bg-image">
@@ -32,6 +31,7 @@ function StoriesGrid({ storiesData }) {
               <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--white">Read Story</a>
             </div>
 
+            <div className="stories-grid__border-btm"></div>
           </div>
         );
       })}
