@@ -22,6 +22,6 @@
   }
 
   &::after {
-    background-image: url('src/assets/shared/desktop/arrow-#{$color-suffix}.svg');
+    background: url('src/assets/shared/desktop/arrow-#{$color-suffix}.svg');
   }
 }

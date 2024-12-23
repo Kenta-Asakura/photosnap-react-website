@@ -40,15 +40,25 @@
     display: block;
     width: 42px;
     height: 12px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--black {
     @include mix.btn-secondary-theme(var.$color-black, 'black');
+
+    // background-image: url('src/assets/shared/desktop/arrow-#{$color-suffix}.svg');
+
+    // &::after {
+    //   background-image: url('src/assets/shared/desktop/arrow-black.svg');
+    // }
   }
   &--white {
     @include mix.btn-secondary-theme(var.$color-white, 'white');
+
+    // &::after {
+    //   background-image: url('src/assets/shared/desktop/arrow-white.svg');
+    // }
   }
 }
