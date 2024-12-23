@@ -20,7 +20,6 @@ function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragrap
   const { ref, animationClass } = useAnimation('', animation);
 
   return (
-    // <section className="hero-two-blocks">
     <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
 
       <div className="container-fluid">

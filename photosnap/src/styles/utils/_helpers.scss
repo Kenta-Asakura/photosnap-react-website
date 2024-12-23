@@ -62,11 +62,11 @@
 @keyframes slideFromLeft {
   from {
     transform: translateX(-100%);
-    // opacity: 0;
+    opacity: 0;
   }
   to {
     transform: translateX(0);
-    // opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -92,6 +92,16 @@
 .slide-from-left,
 .slide-from-right {
   transform: translateX(0);
+
+  @include bp.respond-to(tablet) {
+    animation-duration: .8s;
+  }
+  @include bp.respond-to(mobile) {
+    animation-duration: .7s;
+  }
+  @include bp.respond-to(mobile-small) {
+    animation-duration: .6s;
+  }
 }
 .slide-from-left {
   animation: slideFromLeft .9s ease-in-out forwards;
