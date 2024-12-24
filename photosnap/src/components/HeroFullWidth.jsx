@@ -21,6 +21,7 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
             />
           </picture>
         </div>
+        <div className="hero-full-width__bg-overlay"></div>
 
         <div className={`hero-full-width__contents-block hero-full-width__contents-block--${textColor}`}>
           <div className="hero-full-width__contents-block-inner-wrapper">
@@ -33,7 +34,7 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
             </div>
 
             <p className="hero-full-width__contents-block__description text--opacity-lighter">{paragraph}</p>
-            <a href="" className={`btn-secondary btn-secondary--${btnColor}`}>
+            <a href="" className={`hero-full-width__contents-block__btn btn-secondary btn-secondary--${btnColor}`}>
               {btnText}
             </a>
           </div>

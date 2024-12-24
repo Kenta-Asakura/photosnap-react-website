@@ -24,8 +24,10 @@
     height: 100%;
     transition: top var.$transition;
 
-    &:hover {
-      top: -24px;
+    @include bp.respond-to(tablet-and-desktop) {
+      &:hover {
+        top: -24px;
+      }
     }
   }
 
