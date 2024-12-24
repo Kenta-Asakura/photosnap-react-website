@@ -20,7 +20,6 @@
   &:hover, &:focus {
     color: $color;
   }
-
   &::after {
     background-image: url('@/assets/shared/desktop/arrow-#{$color-suffix}.svg');
   }

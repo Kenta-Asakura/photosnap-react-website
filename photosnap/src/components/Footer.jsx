@@ -8,14 +8,20 @@ function Footer({ setCurrentPage }) {
     <footer className="footer">
       <div className="footer-inner-wrapper container">
         <div className="footer__block-left">
-          <a className="footer__logo" href="">
+          <a className="footer__logo" href="./home"
+            onClick={(e) => {
+              e.preventDefault()
+              setCurrentPage('./home')
+            }}>
             <img src={FooterLogo} alt="Photosnap Footer Logo" />
           </a>
+
           <Nav
             className="footer__nav"
             type="footer"
             setCurrentPage={setCurrentPage}
           />
+          
           <SocialLinks className="footer__social-links" />
         </div>
 
