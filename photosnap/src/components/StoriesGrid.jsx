@@ -31,7 +31,7 @@ function StoriesGrid({ storiesData }) {
               <a href="#" className="stories-grid__contents-overlay__btn btn-secondary btn-secondary--white">Read Story</a>
             </div>
 
-            <div className="stories-grid__border-btm"></div>
+            <div className="stories-grid__border-btm gradient-bar"></div>
           </div>
         );
       })}
