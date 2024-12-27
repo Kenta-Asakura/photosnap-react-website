@@ -4,7 +4,7 @@ import FeaturesShowcase from "../components/FeaturesShowcase";
 
 import { heroBlocksData } from "../data/homeData";
 import { storiesGridData } from "../data/storiesData";
-import { featuresShowcaseData, featuresShowcaseData2 } from "../data/featuresData";
+import { featuresShowcaseData } from "../data/featuresData";
 
 const processedstoriesGridData = storiesGridData.map(story => ({
   ...story,
