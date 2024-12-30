@@ -10,8 +10,8 @@
 
   &:hover {
     color: $hover-text-color;
-    background-color: $hover-bg-color;
-  }
+      background-color: $hover-bg-color;
+    }
 }
 
 @mixin btn-secondary-theme($color, $color-suffix) {

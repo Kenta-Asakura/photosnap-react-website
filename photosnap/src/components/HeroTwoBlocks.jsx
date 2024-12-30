@@ -1,6 +1,19 @@
-import { useAnimation } from "../hooks/useAnimation";
 
-function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragraph, btnText, imgHeight, imgSrc }) {
+import { useAnimation } from "../hooks/useAnimation";
+import { useRef } from "react";
+import { useLazyImageLoader } from "../hooks/useLazyImageLoader";
+
+
+function HeroTwoBlocks({
+  index,
+  blocksLayout,
+  contentsBgColor,
+  heading,
+  paragraph,
+  btnText,
+  imgHeight,
+  imgSrc
+}) {
   // Settings
   // blocksLayout: default = '', 'reverse'
   // contentsBgColor: 'black', 'white'
@@ -15,9 +28,23 @@ function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragrap
   const desktopImg = imgSrc?.desktop;
   const tabletImg = imgSrc?.tablet;
   const mobileImg = imgSrc?.mobile;
+  const blurredImg = imgSrc?.blurred;
 
   const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
   const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
+
+  const imageRef = useRef(null);
+  const handleImageLoad = () => {
+    console.log('Image loaded, class added.');
+    imageRef.current.classList.add("loaded");
+
+    // console.log('imageRef:', imageRef);  // Check if ref is set correctly
+    // console.log('imageRef.current:', imageRef.current);  // Check if ref is set correctly
+    // console.log(imageRef.current.classList);
+  };
+
+  useLazyImageLoader(imageRef, handleImageLoad);
+
 
   return (
     <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
@@ -33,11 +60,17 @@ function HeroTwoBlocks({ index, blocksLayout, contentsBgColor, heading, paragrap
             </div>
           </div>
 
-          <div className="hero-two-blocks__image-block">
+          {/* <div className="hero-two-blocks__image-block blurred-img" style={{ backgroundImage: `url(${blurredImg})` }}> */}
+          <div
+            ref={imageRef} // Reference to the image element
+            className="hero-two-blocks__image-block blurred-img"
+            style={{ backgroundImage: `url(${blurredImg})` }}
+          >
             <picture>
-              <source media="(max-width: 768px)" srcSet={mobileImg} sizes=""/>
+              <source media="(max-width: 768px)" srcSet={mobileImg} />
               <source media="(max-width: 1024px)" srcSet={tabletImg} />
               <img
+                ref={imageRef} // Reference to the image element
                 className={`hero-two-blocks__image-block__img--${imgHeight}`}
                 src={desktopImg}
                 alt={`${heading} Image`}

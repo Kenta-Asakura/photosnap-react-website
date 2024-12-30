@@ -2,12 +2,17 @@
 import CreateAndShareDesktop from '../assets/home/desktop/create-and-share.jpg';
 import CreateAndShareTablet from '../assets/home/tablet/create-and-share.jpg';
 import CreateAndShareMobile from '../assets/home/mobile/create-and-share.jpg';
+import CreateAndShareBlurred from '../assets/home/placeholder/create-and-share.jpg';
+
 import BeautifulStoriesDesktop from '../assets/home/desktop/beautiful-stories.jpg';
 import BeautifulStoriesTablet from '../assets/home/tablet/beautiful-stories.jpg';
 import BeautifulStoriesMobile from '../assets/home/mobile/beautiful-stories.jpg';
+import BeautifulStoriesBlurred from '../assets/home/placeholder/beautiful-stories.jpg';
+
 import DesignedForEveryoneDesktop from '../assets/home/desktop/designed-for-everyone.jpg';
 import DesignedForEveryoneTablet from '../assets/home/tablet/designed-for-everyone.jpg';
 import DesignedForEveryoneMobile from '../assets/home/mobile/designed-for-everyone.jpg';
+import DesignedForEveryoneBlurred from '../assets/home/placeholder/designed-for-everyone.jpg';
 
 export const heroBlocksData = [
   {
@@ -20,6 +25,7 @@ export const heroBlocksData = [
       desktop: CreateAndShareDesktop,
       tablet: CreateAndShareTablet,
       mobile: CreateAndShareMobile,
+      blurred: CreateAndShareBlurred,
     },
   },
   {
@@ -33,6 +39,7 @@ export const heroBlocksData = [
       desktop: BeautifulStoriesDesktop,
       tablet: BeautifulStoriesTablet,
       mobile: BeautifulStoriesMobile,
+      blurred: BeautifulStoriesBlurred,
     },
   },
   {
@@ -45,6 +52,7 @@ export const heroBlocksData = [
       desktop: DesignedForEveryoneDesktop,
       tablet: DesignedForEveryoneTablet,
       mobile: DesignedForEveryoneMobile,
+      blurred: DesignedForEveryoneBlurred,
     },
   },
 ];
