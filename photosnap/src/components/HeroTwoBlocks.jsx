@@ -30,24 +30,23 @@ function HeroTwoBlocks({
   const mobileImg = imgSrc?.mobile;
   const blurredImg = imgSrc?.blurred;
 
-  const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
-  const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
+  // const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
+  // const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
 
   const imageRef = useRef(null);
   const handleImageLoad = () => {
-    console.log('Image loaded, class added.');
-    imageRef.current.classList.add("loaded");
+    // console.log(imageRef);
+    // console.log('Image loaded, class added.');
 
-    // console.log('imageRef:', imageRef);  // Check if ref is set correctly
-    // console.log('imageRef.current:', imageRef.current);  // Check if ref is set correctly
-    // console.log(imageRef.current.classList);
+    imageRef.current.classList.add("loaded");
   };
 
   useLazyImageLoader(imageRef, handleImageLoad);
 
 
   return (
-    <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
+    <section className='hero-two-blocks'>
+    {/* <section ref={ref} className={`hero-two-blocks ${animationClass}`}> */}
 
       <div className="container-fluid">
         <div className={`hero-two-blocks-inner-wrapper${blocksLayout ? ` hero-two-blocks-inner-wrapper--${blocksLayout}` : ''}`}>
@@ -70,10 +69,10 @@ function HeroTwoBlocks({
               <source media="(max-width: 768px)" srcSet={mobileImg} />
               <source media="(max-width: 1024px)" srcSet={tabletImg} />
               <img
-                ref={imageRef} // Reference to the image element
                 className={`hero-two-blocks__image-block__img--${imgHeight}`}
                 src={desktopImg}
                 alt={`${heading} Image`}
+                loading="lazy"
               />
             </picture>
           </div>

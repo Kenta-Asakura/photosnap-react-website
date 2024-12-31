@@ -2,6 +2,7 @@
 import PricingHeroDesktop from '../assets/pricing/desktop/hero.jpg';
 import PricingHeroTablet from '../assets/pricing/tablet/hero.jpg';
 import PricingHeroMobile from '../assets/pricing/mobile/hero.jpg';
+import PricingHeroBlurred from '../assets/pricing/placeholder/hero.jpg';
 
 export const pricingHeroData = [
   {
@@ -14,6 +15,7 @@ export const pricingHeroData = [
       desktop: PricingHeroDesktop,
       tablet: PricingHeroTablet,
       mobile: PricingHeroMobile,
+      blurred: PricingHeroBlurred,
     },
   }
 ];
