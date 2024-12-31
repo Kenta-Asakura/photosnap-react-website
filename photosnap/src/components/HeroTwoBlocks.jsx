@@ -1,8 +1,6 @@
 
 import { useAnimation } from "../hooks/useAnimation";
-import { useRef } from "react";
 import { useLazyImageLoader } from "../hooks/useLazyImageLoader";
-
 
 function HeroTwoBlocks({
   index,
@@ -33,16 +31,7 @@ function HeroTwoBlocks({
   // const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
   // const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
 
-  const imageRef = useRef(null);
-  const handleImageLoad = () => {
-    // console.log(imageRef);
-    // console.log('Image loaded, class added.');
-
-    imageRef.current.classList.add("loaded");
-  };
-
-  useLazyImageLoader(imageRef, handleImageLoad);
-
+  const { imageRef } = useLazyImageLoader(); // Use the hook and get the imageRef
 
   return (
     <section className='hero-two-blocks'>

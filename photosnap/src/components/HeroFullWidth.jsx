@@ -1,4 +1,5 @@
 import { useAnimation } from "../hooks/useAnimation";
+import { useLazyImageLoader } from "../hooks/useLazyImageLoader";
 
 function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, btnText, btnColor, textColor, bgImgSrc}) {
   const desktopImg = bgImgSrc?.desktop;
@@ -6,18 +7,20 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
   const mobileImg = bgImgSrc?.mobile;
 
   const { ref, animationClass } = useAnimation('', 'slide-from-left');
+  const { imageRef } = useLazyImageLoader(); // Use the hook and get the imageRef
 
   return (
     <section ref={ref} className={`hero-full-width ${animationClass}`}>
       <div className="hero-full-width-inner-wrapper">
 
-        <div className="hero-full-width__bg-image">
+        <div ref={imageRef} className="hero-full-width__bg-image">
           <picture>
             <source media="(max-width: 768px)" srcSet={mobileImg} />
             <source media="(max-width: 1024px)" srcSet={tabletImg} />
             <img
               src={desktopImg}
               alt={`${heading} Image`}
+              loading="lazy"
             />
           </picture>
         </div>

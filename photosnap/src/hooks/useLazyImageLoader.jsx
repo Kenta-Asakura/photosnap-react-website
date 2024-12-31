@@ -1,26 +1,39 @@
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 
-export const useLazyImageLoader = (imageRef, onLoadCallback) => {
+export const useLazyImageLoader = (loadedClass = "loaded") => {
+  // console.log(imageRef);
+  const imageRef = useRef(null);
+
   useEffect(() => {
-    const img = imageRef.current.querySelector('img');  // Target the image inside the container
+    // console.log('imageRef', imageRef);
 
+    const ref = imageRef.current;
+    console.log('ref', ref);
+
+    const img = ref.querySelector('img');  // Target the image inside the container
+    // const img = imageRef.current; // Directly use the ref as the image element
     // console.log('img', img);
     // console.log('img.complete', img.complete);
 
-    if (!img) {
-      console.log('No image element found.');
-      return;
-    }
+    // if (!img) {
+    //   console.warn("No image element found within the provided ref.");
+    //   return;
+    // }
+
+    const handleLoad = () => {
+      ref.classList.add(loadedClass); // Add class to container
+    };
 
     if (img.complete) {
-      onLoadCallback();  // Call the callback if image is already loaded
+      handleLoad();  // Call the callback if image is already loaded
     } else {
-      img.addEventListener("load", onLoadCallback);  // Add load event listener if not loaded
+      img.addEventListener("load", handleLoad);  // Add load event listener if not loaded
     }
 
     return () => {
-      // console.log('hook clean up, img load status', img.complete);
-      img.removeEventListener("load", onLoadCallback);  // Cleanup listener on component unmount
+      img.removeEventListener("load", handleLoad); // Cleanup listener
     };
-  }, [imageRef, onLoadCallback]);
+  }, [loadedClass]);
+
+  return { imageRef }; // Return the ref for use in the component
 };
