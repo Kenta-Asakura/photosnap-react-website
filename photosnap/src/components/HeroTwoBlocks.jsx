@@ -28,14 +28,12 @@ function HeroTwoBlocks({
   const mobileImg = imgSrc?.mobile;
   const blurredImg = imgSrc?.blurred;
 
-  // const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
-  // const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
-
+  const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
+  const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
   const { imageRef } = useLazyImageLoader(); // Use the hook and get the imageRef
 
   return (
-    <section className='hero-two-blocks'>
-    {/* <section ref={ref} className={`hero-two-blocks ${animationClass}`}> */}
+    <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
 
       <div className="container-fluid">
         <div className={`hero-two-blocks-inner-wrapper${blocksLayout ? ` hero-two-blocks-inner-wrapper--${blocksLayout}` : ''}`}>
@@ -48,7 +46,6 @@ function HeroTwoBlocks({
             </div>
           </div>
 
-          {/* <div className="hero-two-blocks__image-block blurred-img" style={{ backgroundImage: `url(${blurredImg})` }}> */}
           <div
             ref={imageRef} // Reference to the image element
             className="hero-two-blocks__image-block blurred-img"
