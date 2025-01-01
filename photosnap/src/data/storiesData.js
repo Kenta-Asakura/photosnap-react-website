@@ -2,6 +2,7 @@
 import MoonOfAppalaciaDesktop from '../assets/stories/desktop/moon-of-appalacia.jpg';
 import MoonOfAppalaciaTablet from '../assets/stories/tablet/moon-of-appalacia.jpg';
 import MoonOfAppalaciaMobile from '../assets/stories/mobile/moon-of-appalacia.jpg';
+import MoonOfAppalaciaBlurred from '../assets/stories/placeholder/moon-of-appalacia.jpg';
 
 // Stories Grid 1 Imgs
 import MountainsDesktop from '../assets/stories/desktop/mountains.jpg';
@@ -56,6 +57,7 @@ export const heroFullWidthData = {
     desktop: MoonOfAppalaciaDesktop,
     tablet: MoonOfAppalaciaTablet,
     mobile: MoonOfAppalaciaMobile,
+    blurred: MoonOfAppalaciaBlurred,
   },
 };
 

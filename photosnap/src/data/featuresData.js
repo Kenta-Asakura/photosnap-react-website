@@ -2,6 +2,7 @@
 import FeaturesHeroDesktop from '../assets/features/desktop/hero.jpg';
 import FeaturesHeroTablet from '../assets/features/tablet/hero.jpg';
 import FeaturesHeroMobile from '../assets/features/mobile/hero.jpg';
+import FeaturesHeroBlurred from '../assets/features/placeholder/hero.jpg';
 
 // Features Showcase 1 SVGs
 import ResponsiveSVG from '../assets/features/desktop/responsive.svg'
@@ -25,6 +26,7 @@ export const heroBlocksData = [
       desktop: FeaturesHeroDesktop,
       tablet: FeaturesHeroTablet,
       mobile: FeaturesHeroMobile,
+      blurred: FeaturesHeroBlurred,
     },
   }
 ];
