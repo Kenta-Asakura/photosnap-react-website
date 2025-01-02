@@ -1,4 +1,3 @@
-
 import { useAnimation } from "../hooks/useAnimation";
 import { useLazyImageLoader } from "../hooks/useLazyImageLoader";
 
@@ -30,7 +29,7 @@ function HeroTwoBlocks({
 
   const animation = index % 2 === 0 ? 'slide-from-right' : 'slide-from-left';
   const { ref, animationClass } = useAnimation('slide-from-side--initial', animation);
-  const { imageRef } = useLazyImageLoader(); // Use the hook and get the imageRef
+  const { imageRef } = useLazyImageLoader();
 
   return (
     <section ref={ref} className={`hero-two-blocks ${animationClass}`}>
@@ -50,7 +49,7 @@ function HeroTwoBlocks({
             ref={imageRef} // Reference to the image element
             className="hero-two-blocks__image-block blurred-img"
             style={{ backgroundImage: `url(${blurredImg})` }}>
-              
+
             <picture>
               <source media="(max-width: 768px)" srcSet={mobileImg} />
               <source media="(max-width: 1024px)" srcSet={tabletImg} />
