@@ -1,14 +1,25 @@
 import { useAnimation } from "../hooks/useAnimation";
 import { useLazyImageLoader } from "../hooks/useLazyImageLoader";
 
-function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, btnText, btnColor, textColor, bgImgSrc}) {
+function HeroFullWidth({
+  heading,
+  subHeading,
+  publishDate,
+  author,
+  paragraph,
+  btnText,
+  btnColor,
+  textColor,
+  bgImgSrc
+}) {
+
   const desktopImg = bgImgSrc?.desktop;
   const tabletImg = bgImgSrc?.tablet;
   const mobileImg = bgImgSrc?.mobile;
   const blurredImg = bgImgSrc?.blurred;
 
   const { ref, animationClass } = useAnimation('', 'slide-from-left');
-  const { imageRef } = useLazyImageLoader(); // Use the hook and get the imageRef
+  const { imageRef } = useLazyImageLoader();
 
   return (
     <section ref={ref} className={`hero-full-width ${animationClass}`}>
@@ -16,9 +27,9 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
 
         <div
           ref={imageRef}
-          className="hero-full-width__bg-image"
-          style={{ backgroundImage: `url(${blurredImg})` }}
-        >
+          className="hero-full-width__bg-image blurred-img"
+          style={{ backgroundImage: `url(${blurredImg})` }}>
+
           <picture>
             <source media="(max-width: 768px)" srcSet={mobileImg} />
             <source media="(max-width: 1024px)" srcSet={tabletImg} />
@@ -29,6 +40,7 @@ function HeroFullWidth({ heading, subHeading, publishDate, author, paragraph, bt
             />
           </picture>
         </div>
+
         <div className="hero-full-width__bg-overlay"></div>
 
         <div className={`hero-full-width__contents-block hero-full-width__contents-block--${textColor}`}>

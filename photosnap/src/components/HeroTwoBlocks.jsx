@@ -49,8 +49,8 @@ function HeroTwoBlocks({
           <div
             ref={imageRef} // Reference to the image element
             className="hero-two-blocks__image-block blurred-img"
-            style={{ backgroundImage: `url(${blurredImg})` }}
-          >
+            style={{ backgroundImage: `url(${blurredImg})` }}>
+              
             <picture>
               <source media="(max-width: 768px)" srcSet={mobileImg} />
               <source media="(max-width: 1024px)" srcSet={tabletImg} />

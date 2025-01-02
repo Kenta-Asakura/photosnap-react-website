@@ -3,7 +3,13 @@ import HeroTwoBlocks from "../components/HeroTwoBlocks";
 import Newsletter from "../components/Newsletter";
 import PricingCard from "../components/PricingRateCard";
 import ToggleSwitch from "../components/ToggleSwitch";
-import { pricingHeroData, pricingCardMainData, pricingCardSubData, pricingCardSubData2 } from "../data/pricingData";
+import {
+  pricingHeroData,
+  pricingCardMainData,
+  pricingCardSubData,
+  pricingCardSubData2,
+} from "../data/pricingData";
+import { useAnimation } from "../hooks/useAnimation";
 
 function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
@@ -11,6 +17,8 @@ function Pricing() {
   const handleToggle = () => {
     setIsYearly((prev) => !prev);
   };
+
+  const { ref, animationClass } = useAnimation('', 'slide-from-right');
 
   return (
     <>
@@ -27,29 +35,61 @@ function Pricing() {
         />
       ))}
 
-      <div className="pricing-cards">
+      <div
+        ref={ref}
+        className={`pricing-cards ${animationClass}`}>
+
         <div className="container">
           <div className="pricing-cards__toggle-wrapper">
-            <span className={!isYearly ? "pricing-cards__toggle-option pricing-cards__toggle-option--active" : "pricing-cards__toggle-option"}>Monthly</span>
+            <span
+              className={
+                !isYearly
+                  ? "pricing-cards__toggle-option pricing-cards__toggle-option--active"
+                  : "pricing-cards__toggle-option"
+              }
+            >
+              Monthly
+            </span>
+
             <ToggleSwitch
-              toggleClassName='pricing-cards__toggle-switch'
+              toggleClassName="pricing-cards__toggle-switch"
               isToggled={isYearly}
               onChange={handleToggle}
             />
-            <span className={isYearly ? "pricing-cards__toggle-option pricing-cards__toggle-option--active" : "pricing-cards__toggle-option"}>Yearly</span>
+
+            <span
+              className={
+                isYearly
+                  ? "pricing-cards__toggle-option pricing-cards__toggle-option--active"
+                  : "pricing-cards__toggle-option"
+              }
+            >
+              Yearly
+            </span>
           </div>
 
           <div className="pricing-cards__cards-wrapper">
-            <PricingCard pricingCardData={pricingCardSubData} isYearly={isYearly} />
-            <PricingCard pricingCardData={pricingCardMainData}  isYearly={isYearly} />
-            <PricingCard pricingCardData={pricingCardSubData2}  isYearly={isYearly} />
+            <PricingCard
+              pricingCardData={pricingCardSubData}
+              isYearly={isYearly}
+            />
+
+            <PricingCard
+              pricingCardData={pricingCardMainData}
+              isYearly={isYearly}
+            />
+
+            <PricingCard
+              pricingCardData={pricingCardSubData2}
+              isYearly={isYearly}
+            />
           </div>
         </div>
       </div>
 
       <Newsletter />
     </>
-  )
+  );
 }
 
 export default Pricing;
