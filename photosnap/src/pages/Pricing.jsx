@@ -1,24 +1,19 @@
-import { useState } from "react";
+// import { useState } from "react";
 import HeroTwoBlocks from "../components/HeroTwoBlocks";
+import PricingCards from "../layout/PricingCards";
 import Newsletter from "../components/Newsletter";
-import PricingCard from "../components/PricingRateCard";
-import ToggleSwitch from "../components/ToggleSwitch";
+// import PricingCard from "../components/PricingRateCard";
+// import ToggleSwitch from "../components/ToggleSwitch";
 import {
   pricingHeroData,
-  pricingCardMainData,
-  pricingCardSubData,
-  pricingCardSubData2,
+  // pricingCardMainData,
+  // pricingCardSubData,
+  // pricingCardSubData2,
 } from "../data/pricingData";
-import { useAnimation } from "../hooks/useAnimation";
+// import { useAnimation } from "../hooks/useAnimation";
 
 function Pricing() {
-  const [isYearly, setIsYearly] = useState(false);
 
-  const handleToggle = () => {
-    setIsYearly((prev) => !prev);
-  };
-
-  const { ref, animationClass } = useAnimation('', 'slide-from-right');
 
   return (
     <>
@@ -35,57 +30,7 @@ function Pricing() {
         />
       ))}
 
-      <div
-        ref={ref}
-        className={`pricing-cards ${animationClass}`}>
-
-        <div className="container">
-          <div className="pricing-cards__toggle-wrapper">
-            <span
-              className={
-                !isYearly
-                  ? "pricing-cards__toggle-option pricing-cards__toggle-option--active"
-                  : "pricing-cards__toggle-option"
-              }
-            >
-              Monthly
-            </span>
-
-            <ToggleSwitch
-              toggleClassName="pricing-cards__toggle-switch"
-              isToggled={isYearly}
-              onChange={handleToggle}
-            />
-
-            <span
-              className={
-                isYearly
-                  ? "pricing-cards__toggle-option pricing-cards__toggle-option--active"
-                  : "pricing-cards__toggle-option"
-              }
-            >
-              Yearly
-            </span>
-          </div>
-
-          <div className="pricing-cards__cards-wrapper">
-            <PricingCard
-              pricingCardData={pricingCardSubData}
-              isYearly={isYearly}
-            />
-
-            <PricingCard
-              pricingCardData={pricingCardMainData}
-              isYearly={isYearly}
-            />
-
-            <PricingCard
-              pricingCardData={pricingCardSubData2}
-              isYearly={isYearly}
-            />
-          </div>
-        </div>
-      </div>
+      <PricingCards />
 
       <Newsletter />
     </>
