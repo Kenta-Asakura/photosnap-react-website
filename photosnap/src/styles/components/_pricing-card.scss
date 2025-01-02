@@ -9,6 +9,13 @@
   align-content: space-between;
   row-gap: 40px;
 
+  @include bp.respond-to(tablet-and-desktop) {
+    transition: scale var.$transition;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
   @include bp.respond-to(tablet) {
     grid-template-columns: minmax(0, 240px) 1fr;
     min-height: 270px;
@@ -32,7 +39,6 @@
   &--sub {
     background-color: var.$color-gray-dark;
   }
-
 
   &__plan {
     @include bp.respond-to(tablet) {
