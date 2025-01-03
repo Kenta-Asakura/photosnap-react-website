@@ -1,7 +1,7 @@
 import FooterLogo from '../assets/shared/desktop/logo-white.svg';
-import Button from './Button';
-import Nav from "./Nav";
-import SocialLinks from './SocialLinks';
+import Button from '../components/Button';
+import Nav from "../components/Nav";
+import SocialLinks from '../components/SocialLinks';
 
 function Footer({ setCurrentPage }) {
   return (
@@ -21,7 +21,7 @@ function Footer({ setCurrentPage }) {
             type="footer"
             setCurrentPage={setCurrentPage}
           />
-          
+
           <SocialLinks className="footer__social-links" />
         </div>
 

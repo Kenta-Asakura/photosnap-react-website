@@ -1,6 +1,6 @@
 import HeroTwoBlocks from "../components/HeroTwoBlocks";
 import PricingCards from "../layout/PricingCards";
-import Newsletter from "../components/Newsletter";
+import Newsletter from "../layout/Newsletter";
 import { pricingHeroData } from "../data/pricingData";
 
 function Pricing() {

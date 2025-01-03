@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MainNav from "./MainNav";
-import Nav from "./Nav";
+import MainNav from "../components/MainNav";
+import Nav from "../components/Nav";
 
 function Header({ setCurrentPage }) {
   const [isMobileMenuExpanded, setMobileMenuExpanded] = useState(false);

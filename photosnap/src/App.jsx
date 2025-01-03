@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 import Home from './pages/Home';
 import Stories from './pages/Stories';
 import Features from './pages/Features';
@@ -26,7 +26,10 @@ function App() {
 
   const handleSetCurrentPage = (page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
