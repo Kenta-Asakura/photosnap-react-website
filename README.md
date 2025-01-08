@@ -6,7 +6,7 @@ A multi-page marketing website for a fictional photo-sharing app, built with Rea
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./preview.jpg)
 
 
 ### Built with
