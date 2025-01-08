@@ -20,7 +20,7 @@ function Pricing() {
         />
       ))}
       <PricingCards />
-      <PricingTable />
+      {/* <PricingTable /> */}
       <Newsletter />
     </>
   );
