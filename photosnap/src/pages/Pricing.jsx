@@ -1,5 +1,6 @@
 import HeroTwoBlocks from "../components/HeroTwoBlocks";
 import PricingCards from "../layout/PricingCards";
+import PricingTable from "../components/PricingTable";
 import Newsletter from "../layout/Newsletter";
 import { pricingHeroData } from "../data/pricingData";
 
@@ -18,9 +19,8 @@ function Pricing() {
           imgSrc={block.imgSrc}
         />
       ))}
-
       <PricingCards />
-
+      <PricingTable />
       <Newsletter />
     </>
   );
