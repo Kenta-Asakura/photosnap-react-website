@@ -1,12 +1,9 @@
+![](./preview.jpg)
 # Photosnap Website
 A multi-page marketing website for a fictional photo-sharing app, built with React and SCSS. Original idea from the [Photosnap Website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW).
 
-[Live Site URL](https://photosnap-react-website.netlify.app/)
+Check out the [Live Site](https://photosnap-react-website.netlify.app/)
 
-
-### Screenshot
-
-![](./screenshot.jpg)
 
 
 ### Built with
