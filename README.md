@@ -5,6 +5,7 @@ A multi-page marketing website for a fictional photo-sharing app, built with Rea
 Check out the [Live Site](https://photosnap-react-website.netlify.app/)
 
 
+
 ### Built with
 
 - Semantic HTML5 markup
